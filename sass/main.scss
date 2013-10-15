@@ -1,0 +1,261 @@
+@import "globals";
+@import "helpers";
+@import "responsive";
+
+body {
+  background: $beige;
+  color: $baseColor;
+  font-family: $bodyFont;
+  font-size: 62.5%;
+  font-weight: 300;
+  line-height: 1.25;
+  text-align: center;
+}
+
+
+// Typography
+// ==========================
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+
+h1 {
+  @include font-size(28);
+  color: $headerColor;
+  font-weight: bold;
+  margin: 5px 0;
+
+  @include respond-to(smartphone) {
+    @include font-size(20);
+  }
+}
+
+h2 {
+  @include font-size(18);
+  border-top: 1px solid darken($beige, 20%);
+  line-height: 24px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  @include respond-to(smartphone) {
+    @include font-size(18);
+  }
+  span {
+    background: $beige;
+    line-height: 24px;
+    padding: 0 20px;
+    position: relative;
+    top: -12px;
+  }
+}
+
+h3 {
+  @include font-size(16);
+}
+
+a {
+  color: $tealDark;
+  text-decoration: none;
+
+  -webkit-transition: all .45s ease-in-out;
+  -moz-transition: all .45s ease-in-out;
+  -ms-transition: all .45s ease-in-out;
+  -o-transition: all .45s ease-in-out;
+  transition: all .45s ease-in-out;
+
+  &:hover {
+    color: $headerColor;
+  }
+
+  &:focus {
+    border-bottom: 1px solid $tealDark;
+    outline: none;
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+.wizard-hat,
+.wizard-robe,
+.ninja-pants {
+  @extend %container;
+}
+
+.wizard-hat,
+.wizard-robe {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+// Intro and bio
+// ==========================
+.wizard-hat {
+  @include font-size(18);
+
+  @include respond-to(smartphone) {
+    padding: 20px;
+  }
+}
+
+.yes-im-a-wizard {
+  @include border-radius(50%);
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+
+  -webkit-transition: all .45s ease-in-out;
+  -moz-transition: all .45s ease-in-out;
+  -ms-transition: all .45s ease-in-out;
+  -o-transition: all .45s ease-in-out;
+  transition: all .45s ease-in-out;
+
+  &:hover {
+    border-color: $tealMedium;
+  }
+
+  @include respond-to(smartphone) {
+    float: none;
+    height: 150px;
+    margin: 0 auto;
+    width: 150px;
+  }
+}
+
+.level-up {
+  cursor: pointer;
+  -webkit-transition: all .45s ease-in-out;
+  -moz-transition: all .45s ease-in-out;
+  -ms-transition: all .45s ease-in-out;
+  -o-transition: all .45s ease-in-out;
+  transition: all .45s ease-in-out;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0;
+    visibility: none;
+  }
+}
+
+.spoiler {
+  @include font-size(12);
+}
+
+// Experiment Links
+// ==========================
+
+.wizard-robe {
+  @include font-size(14);
+}
+
+.boss-spells {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+// Social Media Links
+// ==========================
+
+.ninja-pants {
+  padding: 20px 40px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.ninja-stars {
+  li {
+    display: inline-block;
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @include respond-to(smartphone) {
+     display: block;
+     margin-bottom: 10px;
+     margin-left: 0;
+    }
+  }
+
+  a {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: block;
+    height: 36px;
+    text-indent: -9999px;
+    width: 36px;
+
+    -webkit-transition: opacity .45s ease-in-out;
+    -moz-transition: opacity .45s ease-in-out;
+    -ms-transition: opacity .45s ease-in-out;
+    -o-transition: opacity .45s ease-in-out;
+    transition: opacity .45s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include respond-to(smartphone) {
+      margin: 0 auto;
+    }
+  }
+}
+
+a {
+  .twitter & {
+    background-image: url(../img/svg/twitter.svg);
+    width: 51px;
+  }
+
+  .twitter &:hover {
+    background-image: url(../img/svg/twitter-hover.svg);
+  }
+
+  .github & {
+    background-image: url(../img/svg/github.svg);
+    width: 42px;
+  }
+
+  .github &:hover {
+    background-image: url(../img/svg/github-hover.svg);
+  }
+
+  .dribbble & {
+    background-image: url(../img/svg/dribbble.svg);
+    width: 36px;
+  }
+
+  .dribbble &:hover {
+    background-image: url(../img/svg/dribbble-hover.svg);
+  }
+
+  .linkedin & {
+    background-image: url(../img/svg/linkedin.svg);
+    width: 36px;
+  }
+
+  .linkedin &:hover {
+    background-image: url(../img/svg/linkedin-hover.svg);
+  }
+
+  .email & {
+    background-image: url(../img/svg/email.svg);
+    width: 43px;
+  }
+
+  .email &:hover {
+    background-image: url(../img/svg/email-hover.svg);
+  }
+}
