@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>jessabean_source</title>
+		<description>Web designer/developer, sketchnoter, word nerd</description>
+		<link>http://jessica-eldredge.com</link>
+		<atom:link href="http://jessica-eldredge.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Animated Gif Retrieval with Alfred</title>
+				<description>&lt;p&gt;An essential part of my daily workflow is quick and easy access to animated GIFs, so I can be ready with a timely and hilarious reaction to any communication with my colleagues. &lt;a href=&quot;http://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt; and &lt;a href=&quot;https://www.dropbox.com&quot;&gt;Dropbox&lt;/a&gt; make this a breeze.&lt;/p&gt;
+
+&lt;p&gt;If you don&amp;#39;t already use Alfred, I can&amp;#39;t recommend it enough. It&amp;#39;s one of my most essential apps, and its real value lies in the upgrade to the Powerpack, which allows you to write custom actions called workflows to automate tasks, triggered by a keyword or command.&lt;/p&gt;
+
+&lt;p&gt;The fine folks at Destroy Today wrote a &lt;a href=&quot;http://destroytoday.com/blog/gif-workflow/&quot;&gt;handy Alfred workflow&lt;/a&gt; that searches the GIFs in your Dropbox public folder and copies the URL to your clipboard.&lt;/p&gt;
+
+&lt;p&gt;I decided to modify the workflow a bit, because I organize my GIFs into subdirectories in my public folder. I also wanted to make sure to encode spaces in the URL, because some of my GIF categories have multiple words, like &amp;quot;Table Flip.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/44gfmxti9myqn3p/dropbox-gifs.alfredworkflow&quot;&gt;Download my Alfred workflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;May your coworkers be amazed at your lightning fast GIF reaction skills!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://dl.dropboxusercontent.com/u/282732/gifs/Table%20Flip/adventuretime_table_flip.gif&quot; alt=&quot;Table Flipping&quot;&gt;&lt;/p&gt;
+</description>
+				<pubDate>Wed, 22 Jan 2014 00:00:00 -0500</pubDate>
+				<link>http://jessica-eldredge.com//2014/01/22/animated-gifs-with-alfred/</link>
+				<guid isPermaLink="true">http://jessica-eldredge.com//2014/01/22/animated-gifs-with-alfred/</guid>
+			</item>
+		
+			<item>
+				<title>Developing with Yeoman</title>
+				<description>&lt;p&gt;I wanted to build a personal site and blog with &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, and decided to develop with &lt;a href=&quot;http://yeoman.io/&quot;&gt;Yeoman&lt;/a&gt;, a workflow that so many people seem to be saying good things about. I had a couple of requirements when I began:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use Yeoman, Grunt, and Bower to generate my assets and manage my development tasks&lt;/li&gt;
+&lt;li&gt;Create separate git repositories for my source code and the generated public site&lt;/li&gt;
+&lt;li&gt;Manage my repositories with Github&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;To create the skeleton for my site, I decided to use Rob Wierzbowski&amp;#39;s &lt;a href=&quot;https://github.com/robwierzbowski/generator-jekyllrb&quot;&gt;generator-jekyllrb&lt;/a&gt; so I could quickly scaffold a Jekyll site and the appropriate directories.&lt;/p&gt;
+
+&lt;p&gt;The first thing I did was to create a new repository on Github, which I named &lt;code&gt;jessabean_source&lt;/code&gt;. Then I cloned the repository to my computer and navigated into my local copy of &lt;code&gt;jessabean_source&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;git clone git@github.com:jessabean/jessabean_source.git
+cd jessabean_source&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once inside the directory, I ran the generator-jekyllrb setup command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;yo jekyllrb&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I chose the following config options in response to the generator&amp;#39;s prompts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compass for Sass compilation&lt;/li&gt;
+&lt;li&gt;Redcarpet for Markdown&lt;/li&gt;
+&lt;li&gt;No Pygments (I chose to use Lea Verou&amp;#39;s &lt;a href=&quot;http://prismjs.com/&quot;&gt;prism.js&lt;/a&gt; instead)&lt;/li&gt;
+&lt;li&gt;HTML5 Boilerplate&lt;/li&gt;
+&lt;li&gt;Autoprefixer: HELL TO THE YES&lt;/li&gt;
+&lt;li&gt;Number of blog posts on homepage: 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I didn’t include any posts on my homepage, because I wanted to set my blog up in a subdirectory of my site, and use my index page to feature recent projects instead. More on that in a later post! Generator-jekyllrb created the following structure for my site:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;.jekyll&lt;/li&gt;
+&lt;li&gt;.tmp&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;app/&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dist/&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;node_modules/&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;.bowerrc&lt;/li&gt;
+&lt;li&gt;.csslintrc&lt;/li&gt;
+&lt;li&gt;.editorconfig&lt;/li&gt;
+&lt;li&gt;.gitattributes&lt;/li&gt;
+&lt;li&gt;.gitignore&lt;/li&gt;
+&lt;li&gt;.jshintrc&lt;/li&gt;
+&lt;li&gt;_config.build.yml&lt;/li&gt;
+&lt;li&gt;_config.yml&lt;/li&gt;
+&lt;li&gt;bower.json&lt;/li&gt;
+&lt;li&gt;Gemfile&lt;/li&gt;
+&lt;li&gt;Gruntfile.js&lt;/li&gt;
+&lt;li&gt;package.json&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I can also preview my site for local development by running &lt;code&gt;grunt server&lt;/code&gt; and viewing my site in the browser at http://localhost:9000/&lt;/p&gt;
+
+&lt;h2&gt;Using Bower&lt;/h2&gt;
+
+&lt;p&gt;Bower is an awesome package manager that allows you to manage CSS and Javascript vendor frameworks on your site, as well as choose the version for those frameworks. It’s very similar to RubyGems, but without the back end dependency. Extra sugar: if you don&amp;#39;t care about a particular version of a library, you can specify that you want whatever the latest version is, and Bower will fetch it for you.&lt;/p&gt;
+
+&lt;p&gt;There were a few libraries I knew I’d want for my site. First I needed to include those libraries I wanted for my site in the &lt;code&gt;bower.json&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;{
+  &quot;name&quot;: &quot;jessabean-source&quot;,
+  &quot;version&quot;: &quot;2.0.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;jquery&quot;: &quot;2.0.3&quot;,
+    &quot;normalize-css&quot;: &quot;latest&quot;,
+    &quot;modernizr&quot;: &quot;latest&quot;,
+    &quot;prismjs&quot;: &quot;latest&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I installed the dependencies with &lt;code&gt;bower install&lt;/code&gt;. Bower installed the specified JS and CSS files into individual directories inside &lt;code&gt;app/_bower_components&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In order to compile the assets, Grunt requires you to declare those assets inside special comments in your HTML. For example, to include Modernizr, I put this inside the &lt;code&gt;head&lt;/code&gt; tag of my layout file located at &lt;code&gt;app/_layouts/default.html&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;!-- build:js(app) /js/script.js --&amp;gt;
+&amp;lt;script src=&quot;/_bower_components/modernizr/modernizr.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- endbuild --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Git Repository for Source Code&lt;/h2&gt;
+
+&lt;p&gt;Another requirement I had for my site was to create separate repositories for my source code and the generated code. Because reasons.&lt;/p&gt;
+
+&lt;p&gt;All of the source code for my site was already set up in the repository for &lt;code&gt;jessabean_source&lt;/code&gt;. There were just a few more things I wanted to configure. Because the tmp directory, node modules, and bower components are used solely for local development and not needed in production, I add them to my &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;app/_bower_components
+dist
+node_modules
+.tmp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All that shows up in my source code repository is the app itself and its accompanying config files. Nice and clean. You can see my source code repository at &lt;a href=&quot;https://github.com/jessabean/jessabean_source&quot;&gt;jessabean_source&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Git Repository for Public Code&lt;/h2&gt;
+
+&lt;p&gt;To create a separate repository for my public site at &lt;a href=&quot;https://github.com/jessabean/jessabean.github.io&quot;&gt;jessabean.github.io&lt;/a&gt;, I first added the &lt;code&gt;dist/&lt;/code&gt; directory to the list of things in my &lt;code&gt;.gitignore&lt;/code&gt;. This directory is where Grunt places the compiled version of my app code, and I didn’t want to include this in my source repository.&lt;/p&gt;
+
+&lt;p&gt;Then, I navigated into the &lt;code&gt;/dist&lt;/code&gt; directory and deleted all of its contents, giving me a clean slate to build the new repository. I then created a repository called &lt;code&gt;jessabean.github.io&lt;/code&gt; at Github, and cloned its contents into my current directory (&lt;code&gt;dist/&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;git clone git@github.com:jessabean/jessabean.github.io.git .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the repository was set up, I needed to add content. To do this, I navigated up one level, back to my source code. I then compiled my app by running &lt;code&gt;grunt build&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I could verify that changes had been made to my &lt;code&gt;jessabean.github.io&lt;/code&gt; repository by changing into the &lt;code&gt;dist/&lt;/code&gt; directory and seeing a ton of new files had been generated as unstaged commits.&lt;/p&gt;
+
+&lt;p&gt;All that was left was to wrap everything up into commits, push them up to my repositories, and boom. Website.&lt;/p&gt;
+
+&lt;h2&gt;Takeaways&lt;/h2&gt;
+
+&lt;p&gt;Setup was fairly painless with Yeoman. LiveReload and Autoprefixer are some of my favorite aspects of the generator package--they are really, really handy tools! One thing I would like to investigate further is whether all the grunt tasks included by default under &lt;code&gt;node_modules&lt;/code&gt; are  necessary. I suspect that they&amp;#39;re not, but many of them are interdependent, so trying to delete one led me into a rabbit hole of despair that I quickly decided wasn&amp;#39;t worth it.&lt;/p&gt;
+
+&lt;p&gt;There are other build components I want to explore. For instance, &lt;a href=&quot;http://prismjs.com/&quot;&gt;prism.js&lt;/a&gt; has a Bower component, but I couldn&amp;#39;t figure out how to include the language support at first. I ended up including each of the language files I wanted (located in &lt;code&gt;_bower_components/prismjs/components/&lt;/code&gt;) inside Grunt build comments in my scripts file. But it would be nicer if I could package them up inside of the bower.json file, or maybe build a Grunt task that will combine them all into a minified JS file, like the &lt;a href=&quot;http://prismjs.com/&quot;&gt;prism.js&lt;/a&gt; site&amp;#39;s download page allows me to do.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 11 Jan 2014 00:00:00 -0500</pubDate>
+				<link>http://jessica-eldredge.com//2014/01/11/developing-with-yeoman/</link>
+				<guid isPermaLink="true">http://jessica-eldredge.com//2014/01/11/developing-with-yeoman/</guid>
+			</item>
+		
+	</channel>
+</rss>
