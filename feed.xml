@@ -1,10 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>jessabean_source</title>
+		<title>Jessica Eldredge</title>
 		<description>Web designer/developer, sketchnoter, word nerd</description>
 		<link>http://jessica-eldredge.com</link>
 		<atom:link href="http://jessica-eldredge.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Create Headings with Lines in CSS</title>
+				<description>&lt;p&gt;A popular web design pattern is to include horizontal lines on either side of a line of text, often in a heading. There are many different ways to accomplish this via CSS. Many &lt;a href=&quot;http://css-tricks.com/line-on-sides-headers/&quot;&gt;people&lt;/a&gt; before me have &lt;a href=&quot;http://www.impressivewebs.com/centered-heading-horizontal-line/&quot;&gt;collected examples&lt;/a&gt; for this very issue, but I figured one more couldn&amp;rsquo;t hurt.&lt;/p&gt;
+
+&lt;p&gt;For the purposes of this demonstration, I&amp;rsquo;ve left off the vendor prefixes.&lt;/p&gt;
+
+&lt;h2&gt;1: Pseudo-Elements with Nested Span&lt;/h2&gt;
+
+&lt;h3&gt;HTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;&amp;lt;span&amp;gt;Title&amp;lt;/span&amp;gt;&amp;lt;/h1&amp;gt;&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;h3&gt;CSS&lt;/h3&gt;
+
+&lt;pre&gt;
+&lt;code class=&quot;language-css&quot;&gt;h1 {
+  position: relative;
+  text-align: center;
+}
+
+h1 span {
+  background: #fff;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+h1:before {
+  background: #ddd;
+  content: &quot;&quot;;
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+  width: 100%;
+}
+
+h1:before {
+  left: 0;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/daRch/&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This method uses a pseudo-element to place a 1px high line before the heading. The line takes up 100% of its container. The span then uses a background color and some padding to sit on top of the line, so it &lt;em&gt;looks&lt;/em&gt; like there are two lines on either side of the heading.&lt;/p&gt;
+
+&lt;h2&gt;2: Inline Block Heading with Container&lt;/h2&gt;
+
+&lt;h3&gt;HTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&quot;container&quot;&amp;gt;&amp;lt;h1&amp;gt;Title&amp;lt;/h1&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;CSS&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;h1 {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+
+h1:before,
+h1:after {
+  background: #ddd;
+  content: &quot;&quot;;
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+  width: 400%;
+}
+
+h1:before {
+  right: 100%;
+}
+
+h1:after {
+  left: 100%;
+}
+
+.container {
+  overflow: hidden;
+  text-align: center;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/22gHG/&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This method is similar to #1, with a few small differences. The heading has been set to &lt;code&gt;display: inline-block&lt;/code&gt;, which means it won&amp;rsquo;t take up 100% of its container. That in turn means the pseudo-elements being used for the lines need to be longer if you want them to stretch across the page. I&amp;rsquo;ve used an arbitrary 400% here, but that width would likely need to be adjusted for various container sizes. Lastly, this method assumes you don&amp;rsquo;t mind setting &lt;code&gt;overflow: hidden&lt;/code&gt; on a container around the headings.&lt;/p&gt;
+
+&lt;p&gt;Bonus: This method will work on headings with multiple lines of text.&lt;/p&gt;
+
+&lt;h2&gt;3: Nested Span and Gradient&lt;/h2&gt;
+
+&lt;h3&gt;HTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;&amp;lt;span&amp;gt;Title&amp;lt;/span&amp;gt;&amp;lt;/h1&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;CSS&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;
+h1 {
+  background: linear-gradient(top, #fff 0%, #fff 50%, #ddd 50%, #ddd 50.5%, #fff 50.5%, #fff 100%);
+}
+
+h1 span {
+  background: #fff;
+  padding: 0 15px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/FcJgJ/&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This time, the CSS is much more concise. The heading contains a linear gradient that starts from the top, with color stops right around 50% from the top to create the horizontal line. This technique still requires an extra span with a background color to lie on top, in order to create the illusion of two lines.&lt;/p&gt;
+
+&lt;h2&gt;4: Nested Span and Border&lt;/h2&gt;
+
+&lt;h3&gt;HTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;&amp;lt;span&amp;gt;Title&amp;lt;/span&amp;gt;&amp;lt;/h1&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;CSS&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;h1 {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    line-height: 0;
+    padding: 0;
+}
+
+h1 span {
+    background: #fff;
+    padding: 0 15px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/j9wpH/&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This method, proposed by CSS Tricks user &lt;a href=&quot;http://www.twitter.com/kevinthompson&quot;&gt;@kevinthompson&lt;/a&gt;, sets the heading&amp;rsquo;s line height to 0 and gives it a border. Once again, a span with a background color is needed. The line height might give you trouble if you have a long title, but this method is short and sweet for titles that are also short and sweet.&lt;/p&gt;
+
+&lt;h2&gt;5: Table Cell and Gradient&lt;/h2&gt;
+
+&lt;h3&gt;HTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;Title&amp;lt;/h1&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;CSS&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;h1 {
+  display: table;
+  white-space: nowrap;
+  width: 100%;
+}
+
+h1:before,
+h1:after {
+  background-clip: padding;
+  background-image: linear-gradient(transparent 49%, #ddd 50%, #ddd 51%, transparent 51%);
+  content: &quot;&quot;;
+  display: table-cell;
+  width: 50%;
+}
+
+h1:before {
+  border-right: 15px solid transparent;
+}
+
+h1:after {
+  border-left: 15px solid transparent;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/zk27B/1/&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This method, proposed by CSS Tricks user &lt;a href=&quot;http://www.twitter.com/kevinthompson&quot;&gt;@kevinthompson&lt;/a&gt;, sets the heading&amp;rsquo;s line height to 0 and gives it a border. Once again, a span with a background color is needed. The line height might give you trouble if you have a long title, but this method is short and sweet for titles that are also short and sweet.&lt;/p&gt;
+
+&lt;h2&gt;6: Flexbox&lt;/h2&gt;
+
+&lt;h3&gt;HTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;Title&amp;lt;/h1&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;CSS&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+h1:before, h1:after {
+  background-color: #ddd;
+  content: &#39;\a0&#39;;
+  flex-grow: 1;
+  height: 1px;
+  position: relative;
+  top: 0.5em;
+}
+h1:before {
+  margin-right:10px;
+}
+h1:after {
+  margin-left:10px;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/6PVPB/&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The flexbox example was proposed by &lt;a href=&quot;http://www.twitter.com/snookca&quot;&gt;Jonathan Snook&lt;/a&gt;. In it, the heading is defined as a flexbox container with &lt;code&gt;display: flex&lt;/code&gt;. Additionally, the heading&amp;rsquo;s contents flow left to right with &lt;code&gt;flex-direction: row&lt;/code&gt; and are horizontally centered with &lt;code&gt;justify-content: center&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you haven&amp;rsquo;t used the flexbox layout on a project before, you should give it a try—it&amp;rsquo;s pretty neat! Chris Coyier has a &lt;a href=&quot;http://css-tricks.com/snippets/css/a-guide-to-flexbox/&quot;&gt;helpful guide&lt;/a&gt; to how it works.&lt;/p&gt;
+
+&lt;h2&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;As you can see, there are a ton of ways to achieve this little visual trick, and I&amp;rsquo;ve only covered a few. I&amp;rsquo;m partial to the methods that use less markup, so I can keep my HTML free of extra tags that are used only for presentation. Browser support may vary, so you should pick your poison according to your needs.&lt;/p&gt;
+
+&lt;p&gt;If you have a favorite method, please feel free to share with me on &lt;a href=&quot;https://twitter.com/jessabean&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 26 Jan 2014 00:00:00 -0500</pubDate>
+				<link>http://jessica-eldredge.com//2014/01/26/headings-with-lines/</link>
+				<guid isPermaLink="true">http://jessica-eldredge.com//2014/01/26/headings-with-lines/</guid>
+			</item>
 		
 			<item>
 				<title>Animated Gif Retrieval with Alfred</title>
