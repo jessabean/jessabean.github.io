@@ -8,7 +8,10 @@
 		
 			<item>
 				<title>Create Headings with Lines in CSS</title>
-				<description>&lt;p&gt;A popular web design pattern is to include horizontal lines on either side of a line of text, often in a heading. There are many different ways to accomplish this via CSS. Many &lt;a href=&quot;http://css-tricks.com/line-on-sides-headers/&quot;&gt;people&lt;/a&gt; before me have &lt;a href=&quot;http://www.impressivewebs.com/centered-heading-horizontal-line/&quot;&gt;collected examples&lt;/a&gt; for this very issue, but I figured one more couldn&amp;rsquo;t hurt.&lt;/p&gt;
+				<description>&lt;p&gt;A popular web design pattern is to include horizontal lines on either side of a line of text, often in a heading. An example of this style is the subheading treatment in Spotify&amp;#39;s &lt;a href=&quot;https://www.spotify.com/us/2013/&quot;&gt;Year in Review&lt;/a&gt;:
+&lt;img class=&quot;post-img&quot; src=&quot;/img/assets/2014-01-26/spotify-heading.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;There are many different ways to accomplish this via CSS. Many &lt;a href=&quot;http://css-tricks.com/line-on-sides-headers/&quot;&gt;people&lt;/a&gt; before me have &lt;a href=&quot;http://www.impressivewebs.com/centered-heading-horizontal-line/&quot;&gt;collected examples&lt;/a&gt; for this very issue, but I figured one more couldn&amp;rsquo;t hurt.&lt;/p&gt;
 
 &lt;p&gt;For the purposes of this demonstration, I&amp;rsquo;ve left off the vendor prefixes.&lt;/p&gt;
 
