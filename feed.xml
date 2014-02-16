@@ -199,7 +199,7 @@ h1:after {
 }
 h1:before, h1:after {
   background-color: #ddd;
-  content: &#39;\a0&#39;;
+  content: '\a0';
   flex-grow: 1;
   height: 1px;
   position: relative;
