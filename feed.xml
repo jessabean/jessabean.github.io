@@ -7,6 +7,43 @@
 		<atom:link href="http://jessica-eldredge.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Custom Playlist Art on Rdio</title>
+				<description>&lt;p&gt;A really nice feature of the music subscription service &lt;a href=&quot;http://rdio.com&quot;&gt;Rdio&lt;/a&gt; is the ability to create custom artwork for playlists. It&amp;#39;s a fun opportunity for people to personalize their music sharing experience.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img class=&quot;post-img&quot; src=&quot;/img/assets/2014-02-17/rdio-covers.jpg&quot;&gt;
+&lt;figcaption&gt;Rdio artwork by &lt;a href=&quot;http://dribbble.com/brentonlittle&quot;&gt;brentonlittle&lt;/a&gt;, &lt;a href=&quot;http://dribbble.com/talbs&quot;&gt;talbs&lt;/a&gt;, &amp;amp; &lt;a href=&quot;http://dribbble.com/markerarts&quot;&gt;markerarts&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;My pal Brian Talbot shared &lt;a href=&quot;http://dribbble.com/shots/1361176-Rdio-Playlist-Art-2013-Favorites?list=users&quot;&gt;a year of Rdio playlists&lt;/a&gt; on Dribbble, and it inspired me to plan out my 2014 playlist art. I started by planning a color palette for each month, inspired mostly by jewel tones and the &lt;a href=&quot;http://www.pantone.com/coloroftheyear&quot;&gt;Pantone Colors of the Year&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img class=&quot;post-img&quot; src=&quot;/img/assets/2014-02-17/rdio-colors.jpg&quot;&gt;
+&lt;figcaption&gt;My 2014 Rdio playlist color palette (work in progress)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Then I dusted off Adobe Illustrator and tried my hand at designing something light-hearted and fun. I came up with an old-fashioned radio with chunky bold lines and the best part: RAINBOWS!!! Because that&amp;#39;s what music is all about, of course.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/img/assets/2014-02-17/rdio-january.jpg&quot;&gt;
+  &lt;figcaption&gt;My design for January's playlist art (Typeface: Archer)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;To customize your own playlists, find or create an image at least 200px by 200px in size. On your playlist page, hover over the collage of album covers by the playlist title. Click on the pencil icon to edit.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img class=&quot;post-img&quot; src=&quot;/img/assets/2014-02-17/update-cover-art-2.jpg&quot;&gt;
+&lt;figcaption&gt;Upload a new image to customize your artwork&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;When the Edit Playlist Artwork modal appears, upload a new image for your playlist, hit the Save button, and enjoy rocking out with a more personalized playlist.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 17 Feb 2014 00:00:00 -0500</pubDate>
+				<link>http://jessica-eldredge.com//2014/02/17/rdio-playlist-art/</link>
+				<guid isPermaLink="true">http://jessica-eldredge.com//2014/02/17/rdio-playlist-art/</guid>
+			</item>
+		
+			<item>
 				<title>Create Headings with Lines in CSS</title>
 				<description>&lt;p&gt;A popular web design pattern is to include horizontal lines on either side of a line of text, often in a heading. An example of this style is the subheading treatment in Spotify&amp;#39;s &lt;a href=&quot;https://www.spotify.com/us/2013/&quot;&gt;Year in Review&lt;/a&gt;:
 &lt;img class=&quot;post-img&quot; src=&quot;/img/assets/2014-01-26/spotify-heading.jpg&quot;&gt;&lt;/p&gt;
