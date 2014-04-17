@@ -7,6 +7,84 @@
 		<atom:link href="http://jessica-eldredge.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Submitting My First Talk Proposal</title>
+				<description>&lt;p&gt;I’ve had the privilege of working with some fantastic people over the course of my career; people who are good at their respective crafts, and who are good at sharing their skills with the public through their writing and public speaking.&lt;/p&gt;
+
+&lt;p&gt;I too have felt an itch to share my knowledge with others, and have hesitated for numerous reasons, including but not limited to: I don’t know what to say, I don’t know how to say it, I’m not experienced enough, and &lt;em&gt;I’m just plain scared&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;After conversing with some aforementioned fantastic people last year about the benefits that being a recognized speaker brings to one’s career, the itch got stronger. I decided that in 2014, I’d push all the silly excuses aside and give public speaking a shot. To my excitement, my first talk proposal about techniques for sketchnoting technical content has been accepted to two conferences year! I wanted to share my experience crafting and submitting a proposal.&lt;/p&gt;
+
+&lt;h2&gt;Step 1: What to Talk About&lt;/h2&gt;
+
+&lt;p&gt;The very hardest part of the process, the part that has the potential to stop everything in its tracks, is deciding what to talk about. I started by asking myself some questions: What am I good at? What can I teach people about? What do I think people would be interested in learning about?&lt;/p&gt;
+
+&lt;p&gt;I’m a front end developer, so these questions took me on a meandering path through various ideas about CSS and user experience and structuring app assets, but to be honest, I just couldn’t get excited about any of them. Like I said, this step almost stopped everything in its tracks.&lt;/p&gt;
+
+&lt;p&gt;So I asked myself again why I wanted to speak at all. One of the reasons was pretty simple: some people I knew had encouraged me to. Even more, they’d encouraged me to speak on a specific subject.&lt;/p&gt;
+
+&lt;p&gt;Whenever I go to a conference, I like to practice &lt;a href=&quot;http://sketchnotearmy.com/about/&quot;&gt;sketchnoting&lt;/a&gt;. It turns out to be a great conversation starter—people like looking at them and asking me questions. I get so many questions, in fact, that it occurred to me that I could answer these questions in a public space.&lt;/p&gt;
+
+&lt;p&gt;While walking home one day from work, I spent 30 minutes having a mental conversation with myself about how to sketchnote. By the end of my walk, I was totally pumped; way more pumped that I was about any of the other ideas I’d been kicking around before. I realized I could &lt;em&gt;really&lt;/em&gt; talk about this…and, just like that, I had a topic.&lt;/p&gt;
+
+&lt;h2&gt;Step 2: Writing the Proposal&lt;/h2&gt;
+
+&lt;p&gt;There have been &lt;a href=&quot;http://www.noelrappin.com/railsrx/2014/3/17/what-i-learned-from-reading-429-conference-proposals&quot;&gt;a lot&lt;/a&gt; of &lt;a href=&quot;http://www.sarahmei.com/blog/2014/04/07/what-your-conference-proposal-is-missing/&quot;&gt;great posts&lt;/a&gt; about &lt;a href=&quot;http://blog.testdouble.com/posts/2014-04-04-crafting-a-conference-talk.html&quot;&gt;writing&lt;/a&gt; effective &lt;a href=&quot;http://jumpstartlab.com/news/archives/2013/08/30/submitting-conference-proposals&quot;&gt;proposals&lt;/a&gt;. I won’t rehash any of that here—you should read them!&lt;/p&gt;
+
+&lt;p&gt;I was fortunate to have some great coaching from more experienced friends about how to write my proposal. In some cases I didn’t even have to ask; they reached out to me! I’m grateful for the advice I received and I think it really helped me feel more confident when crafting and submitting my talk.&lt;/p&gt;
+
+&lt;p&gt;Writing the abstract actually turned out to be easier for me than I anticipated. I imagined meeting someone in the hallway track at a conference and being told: “I really like your sketchnotes! I wish I knew how do that!” While composing the abstract, I asked myself: “How would I reply to this person?”&lt;/p&gt;
+
+&lt;p&gt;The best advice I got was how to approach the detailed description in a CFP (call for proposals). Being completely new to the proposal process, I wasn’t aware what additional information I should provide to the reviewers. One of my mentors advised:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Good talks should have a purpose. What is it? Many
+organizers want to see that. You don&amp;#39;t want that in your abstract as that&amp;#39;s the punchline that they have to show up to hear.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With that in mind, I tried to keep a few details to myself, but also communicate my excitement about the subject matter. I started with what inspired me to give the talk in the first place, and how I thought my ideas would help attendees.&lt;/p&gt;
+
+&lt;p&gt;A friend also suggested creating an outline of my talk, which I included in the notes to the organizers. I think this helped communicate that I’d thought about the content of my talk beyond a one-paragraph abstract. It also saved me some time later—I then had a skeleton of a talk to start filling in when creating my slides. Perhaps my submission was a bit of overkill, but I don’t regret spending the time to lay out my ideas.&lt;/p&gt;
+
+&lt;p&gt;You can see my original proposal here: &lt;a href=&quot;https://gist.github.com/jessabean/f037a962c751b1d8fca6&quot;&gt;https://gist.github.com/jessabean/f037a962c751b1d8fca6&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Step 3: Deciding Where to Submit&lt;/h2&gt;
+
+&lt;p&gt;I knew that I wanted to deliver my talk to developers, so when deciding &lt;em&gt;where&lt;/em&gt; to submit my talk, I looked for technical conferences. Seeing as how I feel embraced by the Ruby on Rails community, and am familiar with some of its conferences, I decided to start with some Ruby conferences.&lt;/p&gt;
+
+&lt;p&gt;The very first conference I submitted to was &lt;a href=&quot;http://2014.scottishrubyconference.com/&quot;&gt;Scottish Ruby Conf&lt;/a&gt;. I happen to know the conference organizers and that they are committed to creating a diverse and fun program every year. It’s a conference I’ve enjoyed as an attendee in the past and wanted to go back to. I also submitted to &lt;a href=&quot;http://railsconf.com/&quot;&gt;RailsConf&lt;/a&gt;, which is HUGE and terrifying, but also so much fun and well-attended by many amazing people. Again, I knew that the organizers are always looking for something new and fresh, and I have seen some great design-oriented talks there in the past, so I felt like my talk would fit in.&lt;/p&gt;
+
+&lt;p&gt;To my delight, my talk has been accepted to these two conferences! I feel very honored and humbled by this. So many talented people applied for a limited number of speaker slots. I hope I can deliver a talk that will be worth my valuable place on the schedule.&lt;/p&gt;
+
+&lt;p&gt;I can count on one hand the number of conferences I’ve submitted to so far, and I feel fortunate to have been accepted to two of them. During this process, I’ve specifically sought out conferences that not only provide great content, but also a welcoming space for attendees and speakers. I also had in mind conferences that embrace first-time speakers. I’m a total n00b, so if I’m going to speak, I’d rather it be somewhere with a supportive organizing committee that puts as much thought into the people of their conference as the content.&lt;/p&gt;
+
+&lt;p&gt;Some people advise submitting everywhere to increase the odds of getting accepted. I feel more comfortable with my targeted approach; it may mean I submit to and potentially speak at less conferences, but at least I know if I do get accepted, the conference is totally worth the time and effort to travel.&lt;/p&gt;
+
+&lt;h2&gt;Step 4: Putting the Talk Together&lt;/h2&gt;
+
+&lt;p&gt;I started working on my slides about about 2 months before RailsConf. Thankfully I had my outline from my CFP to start from. I used the &lt;a href=&quot;http://writer.pro/&quot;&gt;Writer Pro&lt;/a&gt; app to start adding additional bullet points to each section of my outline, figuring these points would end up as my speaker’s notes in the final presentation.&lt;/p&gt;
+
+&lt;p&gt;Because I’ve been inspired by others’ sketchnotes for a long time, it was fun and relatively easy to find examples to include in my slides. I spent a weekend perusing the internet and saving images to a folder where I kept all the assets for my slides.&lt;/p&gt;
+
+&lt;p&gt;I tried to follow a lot of the guidance that Zach Holman provides on &lt;a href=&quot;http://speaking.io/&quot;&gt;Speaking.io&lt;/a&gt;, especially the section on typography. My slides are set in PT Sans, an extremely legible sans-serif typeface. It’s often used in signage, which is great because I wanted to ensure that users could see my slides from far away.&lt;/p&gt;
+
+&lt;p&gt;At first, I followed my original outline explicitly; I needed to just get content onto slides. Then I moved things around as I determined a better flow for my talk. My final presentation is slightly different than the outline I submitted. I don’t have an explicit story arc, as many speakers have advised, but I think my talk follows the sketchnoting thought process pretty well.&lt;/p&gt;
+
+&lt;h2&gt;Step 5: Profit?&lt;/h2&gt;
+
+&lt;p&gt;At this point, I still haven’t actually delivered my talk to a conference audience. I’ve had many panicky moments over the last month as I struggled to put together my slides and questioned whether I can actually stand up on a stage and say words without throwing up.&lt;/p&gt;
+
+&lt;p&gt;The good news is, I was able to deliver a practice talk to the engineering team at Shopify…and I didn’t throw up!&lt;/p&gt;
+
+&lt;p&gt;Avdi Grimm recently wrote about giving yourself &lt;a href=&quot;http://devblog.avdi.org/2014/04/08/how-to-suck-at-conference-talks/&quot;&gt;permission to suck&lt;/a&gt;. I think that’s really good advice. At this point, there are a few too many “ums” in my delivery, and the stories aren’t as funny or as exciting as I imagined them to be in my head. But I’m okay with it…my technique will get better over time.&lt;/p&gt;
+
+&lt;p&gt;It’s simultaneously terrifying and exciting to hear people tell me they are looking forward to my talk. I hope I can deliver!&lt;/p&gt;
+</description>
+				<pubDate>Thu, 17 Apr 2014 00:00:00 -0400</pubDate>
+				<link>http://jessica-eldredge.com//2014/04/17/submitting-my-first-talk-proposal/</link>
+				<guid isPermaLink="true">http://jessica-eldredge.com//2014/04/17/submitting-my-first-talk-proposal/</guid>
+			</item>
+		
+			<item>
 				<title>Custom Playlist Art on Rdio</title>
 				<description>&lt;p&gt;A really nice feature of the music subscription service &lt;a href=&quot;http://rdio.com&quot;&gt;Rdio&lt;/a&gt; is the ability to create custom artwork for playlists. It&amp;#39;s a fun opportunity for people to personalize their music sharing experience.&lt;/p&gt;
 
@@ -26,7 +104,7 @@
 
 &lt;figure&gt;
   &lt;img src=&quot;/img/assets/2014-02-17/rdio-january.jpg&quot;&gt;
-  &lt;figcaption&gt;My design for January's playlist art (Typeface: Archer)&lt;/figcaption&gt;
+  &lt;figcaption&gt;My design for January&#39;s playlist art (Typeface: Archer)&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;To customize your own playlists, find or create an image at least 200px by 200px in size. On your playlist page, hover over the collage of album covers by the playlist title. Click on the pencil icon to edit.&lt;/p&gt;
@@ -236,7 +314,7 @@ h1:after {
 }
 h1:before, h1:after {
   background-color: #ddd;
-  content: '\a0';
+  content: &#39;\a0&#39;;
   flex-grow: 1;
   height: 1px;
   position: relative;
