@@ -1,0 +1,30 @@
+{
+  "name": "jessica-eldredge.com",
+  "version": "0.0.0",
+  "description": "Personal website for Jessica Eldredge, front end developer",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jessica Eldredge",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jessabean/jessabean.github.io"
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "browsersync"
+  ],
+  "bugs": {
+    "url": "https://github.com/jessabean/jessabean.github.io/issues"
+  },
+  "homepage": "http://jessabean.github.io",
+  "dependencies": {
+  }
+}
