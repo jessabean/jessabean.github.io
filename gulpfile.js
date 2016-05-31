@@ -3,24 +3,19 @@ var browserSync = require('browser-sync');
 var prefix      = require('gulp-autoprefixer');
 var sass        = require('gulp-sass');
 var cp          = require('child_process');
+var ghPages     = require('gulp-gh-pages');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
-/**
- * Build the Jekyll Site
- */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
-/**
- * Rebuild Jekyll & do page reload
- */
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
 });
@@ -48,6 +43,11 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('_scss/**/*.scss', ['sass', 'jekyll-build']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*', 'about/*', 'blog/*'], ['jekyll-rebuild']);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./_site/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
