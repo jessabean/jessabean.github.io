@@ -1,0 +1,50 @@
+.posts-list {
+  @extend %unstyled-list;
+  > li {
+    margin-bottom: 40px;
+  }
+  h1,
+  p {
+    margin-bottom: 0;
+  }
+  .post-meta {
+    color: $text_subdued;
+  }
+}
+
+.post-footer {
+  border-top: 1px solid $gray-lightest;
+  color: $text_subdued;
+  font-family: $sans;
+  font-size: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  .post-date {
+    display: block;
+    font-family: $serif;
+    font-size: $base_font_size;
+    margin-bottom: 10px;
+    text-transform: none;
+  }
+}
+
+.tags-list {
+  @extend %unstyled-list;
+  display: inline-block;
+  margin-left: 10px;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.post-img {
+  display: block;
+  margin: 32px 0;
+  margin-left: -$post-image-offset;
+  @include breakpoint(tablet-sm) {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}

@@ -1,0 +1,18 @@
+code {
+  background: #f5f2f0;
+  color: black;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: 16px;
+  padding: 2px 8px;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+}
+
+pre[class*="language-"] {
+  padding: 15px;
+}
+
+pre[class*="language-"] code {
+  padding: 0;
+}

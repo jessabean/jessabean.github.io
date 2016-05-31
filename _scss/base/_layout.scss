@@ -1,0 +1,15 @@
+$content-padding: calc((100% - #{$content-width}) / 2);
+
+html,
+body {
+  margin: 0;
+}
+
+#main {
+  padding: 40px $content-padding;
+
+  @include breakpoint(tablet-sm) {
+    $content-padding: calc((100% - 90%) / 2);
+    padding: 40px $content-padding;
+  }
+}

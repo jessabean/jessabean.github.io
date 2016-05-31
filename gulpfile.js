@@ -36,7 +36,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 gulp.task('sass', function () {
     return gulp.src('_scss/main.scss')
         .pipe(sass({
-            includePaths: ['scss'],
+            includePaths: ['_scss'],
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
@@ -46,7 +46,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('_scss/*.scss', ['sass']);
+    gulp.watch('_scss/**/*.scss', ['sass', 'jekyll-build']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

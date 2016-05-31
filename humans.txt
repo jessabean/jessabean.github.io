@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jessica Eldredge -- Site Maker --  http://twitter.com/jessabean
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    Jekyll static site generator
+    Sass and Compass 
+    HTML5 ★ Boilerplate 
+

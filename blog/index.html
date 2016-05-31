@@ -1,0 +1,19 @@
+---
+layout: blog
+title: Blog - Jessica Eldredge
+---
+
+<section class="home posts">
+  <ul class="posts-list">
+  {% for post in site.posts limit:5 %}
+    <li>
+      <article>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="post-meta"><time>{{ post.date | date: "%-d %B %Y" }}</time></div>
+        <p>{{ post.blurb }}</p>
+        <a href="{{ post.url }}" class="read-more">read more</a>
+      </article>
+    </li>
+  {% endfor %}
+  </ul>
+</section>

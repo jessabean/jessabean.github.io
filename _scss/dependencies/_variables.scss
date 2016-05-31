@@ -1,0 +1,41 @@
+// ===========================================================================
+// Colors
+// ===========================================================================
+$white:       #fff;
+$black:       #000;
+
+$beige:       #f1eee9;
+$teal:        #54a4b2;
+$teal-light:  #88c3cd;
+$pink:        #d95648;
+
+$gray:          #333;
+$gray-light:    lighten($gray, 50%);
+$gray-lightest: lighten($gray, 75%);
+$gray-dark:     darken($gray, 25%);
+
+// ===========================================================================
+// Type
+// ===========================================================================
+
+$serif: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", Georgia, Times, serif;
+$sans: "open-sans-1","open-sans-2", Helvetica, Arial, sans-serif;
+
+$base_font_size: 22px;
+$base_line_height: 1.5;
+
+$text_color: $gray;
+$text_subdued: $gray-light;
+
+$link_color: $teal;
+$link_hover_color: $pink;
+
+// ===========================================================================
+// Units
+// ===========================================================================
+
+$content-width:     600px;
+$post-image-width:  750px;
+$post-image-offset: ($post-image-width - $content-width) / 2;
+$blockquote-width: 750px;
+$blockquote-offset: ($blockquote-width - $content-width) / 2;

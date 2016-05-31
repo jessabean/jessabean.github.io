@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $white;
+  color: $text_color;
+  font-family: $serif;
+  font-size: $base_font_size;
+  line-height: $base_line_height;
+  padding: 0;
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  border-bottom: 1px solid $gray-lightest;
+  font-family: $sans;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: $sans;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p {
+  font-size: $base_font_size;
+  line-height: $base_line_height;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+  &:hover {
+    color: $link_hover_color;
+  }
+  &:visited {
+    color: $link_color;
+  }
+}
+
+::-moz-selection {
+  background: $link_hover_color;
+  color: $white;
+}
+
+::selection {
+  background: $link_hover_color;
+  color: $white;
+}
+
+figure {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
+blockquote {
+  margin-left: -$blockquote-offset;
+  width: $blockquote-width;
+  p {
+    font-size: 26px;
+    font-style: italic;
+    text-align: center;
+  }
+  @include breakpoint(tablet-sm) {
+    font-size: 22px;
+    margin: 0;
+    width: auto;
+  }
+}

@@ -1,15 +1,25 @@
 ---
-layout: default
+layout: blog
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
+<article class="post">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <h1>{{ page.title }}</h1>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+  {{ content }}
 
+  <footer class="post-footer">
+    <time datetime="{{ page.date }}" class="post-date">{{ page.date | date: "%-d %B %Y" }}</time>
+    {% if post.tags or page.tags %}
+      Tagged:
+      <ul class="tags-list">
+        {% for tag in post.tags %}
+        <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+        {% for tag in page.tags %}
+          <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </footer>
 </article>

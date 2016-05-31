@@ -1,0 +1,18 @@
+#global-footer {
+  padding: 25px 50px;
+}
+
+.social-links {
+  @extend %unstyled-list;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin-right: 25px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include breakpoint(phone-lg) {
+      margin-right: 15px;
+    }
+  }
+}
