@@ -1,3 +1,5 @@
+@import "util/normalize";
+
 @import "dependencies/variables";
 @import "dependencies/helpers";
 @import "dependencies/responsive";
@@ -14,3 +16,4 @@
 @import "templates/posts";
 
 @import "vendor/social-circle";
+@import "vendor/prism";
