@@ -4,7 +4,7 @@ jessabean.github.io
 Source code for [jessica-eldredge.com](http://jessica-eldredge.com)
 
 ## To Do:
-- [ ] Fix SVG icons
+- [x] Fix SVG icons
 - [x] Update about page
 - [ ] Add resume
 - [ ] Add a "now" page
