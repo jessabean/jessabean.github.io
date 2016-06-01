@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <script type="text/javascript" src="//use.typekit.net/nvf6gkk.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  </head>
+  <body class="resume">
+    {% include icon-data.svg %}
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="resume__header">
+      <nav class="global-nav">
+        <ul>
+          <li><a href="/">&laquo; Back to jessica-eldredge.com</a></li>
+        </ul>
+      </nav>
+      <div class="resume__title">
+        <h1>Jessica Eldredge</h1>
+        <h2>Front-End Developer</h2>
+      </div>
+      <div class="resume__summary">I'm an empathetic developer who enjoys building user experiences with HTML, CSS, and JavaScript. I care deeply about people, and collaborating with my teammates to build products that will make users&mdash;and developers!&mdash;happy. As a lifelong learner, I believe in mentorship and fostering respectful environments for sharing knowledge.</div>
+    </header>
+    <main class="resume__body">
+      {{ content }}
+    </main>
+    <footer class="resume__footer">
+      <h3 class="resume__footer-header">Let's chat!</h3>
+      <span class="resume__email">jessica@eldredge.io</span>
+    </footer>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

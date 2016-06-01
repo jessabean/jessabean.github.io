@@ -1,0 +1,140 @@
+.resume {
+  .global-nav {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .global-nav ul {
+    font-size: 16px;
+    text-transform: none;
+  }
+}
+
+.resume__header {
+  background: url(/img/bg.jpg);
+  color: #fff;
+  padding-top: 40px;
+  padding-right: calc((100% - #{$content-width}) / 2);
+  padding-bottom: 40px;
+  padding-left: calc((100% - #{$content-width}) / 2);
+  position: relative;
+
+  @include breakpoint(tablet-half) {
+    padding-bottom: 40px;
+  }
+
+  @include breakpoint(tablet-sm) {
+    $content-padding: calc((100% - 90%) / 2);
+    padding: 40px $content-padding;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-weight: normal;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(tablet-sm) {
+      text-align: center;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 0;
+  }
+}
+
+.resume__summary {
+  @include breakpoint(tablet-sm) {
+    font-size: 18px;
+  }
+}
+
+.resume__section-header {
+  border-bottom: 1px solid $gray-lightest;
+}
+
+.resume__body {
+  padding: 40px $content-padding;
+  font-size: 16px;
+
+  @include breakpoint(tablet-sm) {
+    $content-padding: calc((100% - 90%) / 2);
+    padding: 40px $content-padding;
+  }
+}
+
+.entry {
+  & + .entry {
+    margin-top: 2rem;
+  }
+}
+
+.entry__header {
+  display: flex;
+  font-family: $sans;
+
+  @include breakpoint(tablet-sm) {
+    flex-direction: column;
+  }
+}
+
+.entry__description {
+  flex: 1;
+
+  h2 {
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  h3 {
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+.entry__date {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include breakpoint(tablet-sm) {
+    margin-top: 0.5rem;
+  }
+}
+
+.skillset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    flex: 0 1 auto;
+    width: 25%;
+
+    @include breakpoint(tablet-sm) {
+      width: 50%;
+    }
+  }
+}
+
+.resume__footer {
+  border-top: 1px solid $gray-lightest;
+  padding: 40px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.resume__footer-header {
+  font-family: $serif;
+  font-size: 36px;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
