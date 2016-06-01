@@ -12,17 +12,24 @@ Lately, I’ve been trying to reexamine some of the CSS rules I’ve taken for g
 A common design pattern we see on the web is a perfect circle, sometimes with a background color or an image inside.
 
 <figure>
-{% img post-img /img/assets/2014-09-07/examples.jpg %}
-<figcaption>CSS circles on <a href="http://www.rdio.com">Rdio</a>, <a href="http://www.dribbble.com">Dribbble</a>, and <a href="http://www.codecademy.com">Codecademy</a>.</figcaption>
+  {% include image.html
+          img="img/assets/2014-09-07/examples.jpg"
+          title="CSS circles on Rdio, Dribble, and Codecademy"
+          class="post-img" %}
+  <figcaption>CSS circles on <a href="http://www.rdio.com">Rdio</a>, <a href="http://www.dribbble.com">Dribbble</a>, and <a href="http://www.codecademy.com">Codecademy</a></figcaption>
 </figure>
+
 
 This is often achieved by using CSS’s "border-radius" property. The way I’ve always done it is to create a square, and then set the border radius to 50%. I’ve never really questioned this; I’ve simply accepted that setting the radius to half the height/width of the square on all the corners would create a circle.
 
 Here is a 150px by 150px square that transforms into a circle by setting each corner’s border radius to 50%. According to the W3C's [section on border radius], percentage-based units for border radius refer to the width and height of the border box. In my example, the width/height of the border box is 150px, so 50% would return a computed value of 75px.
 
 <figure>
-{% img post-img /img/assets/2014-09-07/square-to-circle.jpg %}
-<figcaption>Transforming a square to a circle using CSS border-radius. [<a href="http://codepen.io/jessabean/pen/zELqt">CodePen</a>]</figcaption>
+  {% include image.html
+            img="img/assets/2014-09-07/square-to-circle.jpg"
+            title="Transforming a square to a circle using CSS border-radius"
+            class="post-img" %}
+  <figcaption>Transforming a square to a circle using CSS border-radius. [<a href="http://codepen.io/jessabean/pen/zELqt">CodePen</a>]</figcaption>
 </figure>
 
 
@@ -35,7 +42,10 @@ In Lea Verou’s presentation, [The Humble Border Radius], she points out the W3
 If the top left border radius of the square is set to 100%, the radius stretches from the bottom left corner to the top right corner of the square. This is the same as setting the border radius to 150px, the size of the square. And if the top right border radius is *also* set to 100%, the total of the 2 corners is now 200%. The browser says, “That’s not allowed—make some room for the right corner!” and scales both radii until they fit inside the square. At this point, each corner is now half of 100%.
 
 <figure>
-{% img post-img /img/assets/2014-09-07/square-to-circle-2.jpg %}
+  {% include image.html
+            img="img/assets/2014-09-07/square-to-circle-2.jpg"
+            title="How border-radius 100% gets scaled down by the browser"
+            class="post-img" %}
 <figcaption>How border-radius 100% gets scaled down by the browser. [<a href="http://codepen.io/jessabean/pen/sJCBx">CodePen</a>]</figcaption>
 </figure>
 

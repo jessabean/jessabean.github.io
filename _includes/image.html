@@ -1,0 +1,7 @@
+{% if include.url %}
+  <a href="{{ include.url }}" title="{{ include.title }}">
+{% endif %}
+<img src="{{ baseurl }}/{{ include.img }}" alt="{{ include.title }}" class="{{ include.class}}" />
+{% if include.url %}
+  </a>
+{% endif %}

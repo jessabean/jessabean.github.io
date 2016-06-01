@@ -6,7 +6,14 @@ blurb: A popular web design pattern is to include horizontal lines on either sid
 ---
 
 A popular web design pattern is to include horizontal lines on either side of a line of text, often in a heading. An example of this style is the subheading treatment in Spotify's [Year in Review]:
-{% img post-img /img/assets/2014-01-26/spotify-heading.jpg %}
+
+<figure>
+  {% include image.html
+            img="img/assets/2014-01-26/spotify-heading.jpg"
+            title="Subheadings on Spotify's Year in Review"
+            class="post-img" %}
+  <figcaption>Subheadings on Spotify's <a href="https://www.spotify.com/us/2013/">Year in Review</a></figcaption>
+</figure>
 
 There are many different ways to accomplish this via CSS. Many [people] before me have [collected examples] for this very issue, but I figured one more couldn&rsquo;t hurt.
 
