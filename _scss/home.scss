@@ -4,10 +4,14 @@
 @import "dependencies/helpers";
 @import "dependencies/responsive";
 
+@import "base/layout";
+@import "base/typography";
+@import "base/base";
+
 .home__header {
-  padding-top: 40px;
+  padding-top: 30px;
   padding-right: calc((100% - #{$content-width}) / 2);
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   padding-left: calc((100% - #{$content-width}) / 2);
   text-align: center;
   background: url(/img/bg.jpg);
@@ -19,10 +23,29 @@
   }
 
   h1 {
+    line-height: 1;
     margin-bottom: 0.5rem;
   }
 
   h2 {
     border: none;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+}
+
+.home__body {
+  padding: 40px $content-padding;
+
+  @include breakpoint(tablet-sm) {
+    $content-padding: calc((100% - 90%) / 2);
+    padding: 40px $content-padding;
+  }
+}
+
+p {
+  @include breakpoint(tablet-sm) {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 }
