@@ -1,29 +1,44 @@
 ---
-layout: default
+layout: home
 title: Jessica Eldredge
 ---
 
-<section class="featured-projects">
-  <h2>Featured Projects</h2>
-  <ul class="projects-list">
-    <li><a href="http://jessica-eldredge.com/animated_slideshow/">CSS3 animated slideshow</a></li>
-    <li><a href="http://jessica-eldredge.com/periodic_table_typefaces/">CSS Periodic Table of Typefaces</a></li>
-    <li><a href="http://codepen.io/jessabean">CodePen experiments</a></li>
-    <li><a href="http://projeqt.com/jessabean">Sketchnotes</a></li>
-  </ul>
-</section>
-<section class="recent-posts">
-  <h2>Recent Writing</h2>
-  <ol class="posts-list">
-  {% for post in site.posts limit:5 %}
+<section>
+    <ul class="social-links">
     <li>
-      <article>
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <div class="post-meta"><time>{{ post.date | date: "%-d %B %Y" }}</time></div>
-        <p>{{ post.blurb }}</p>
-        <a href="{{ post.url }}" class="read-more">read more</a>
-      </article>
+      <a href="http://github.com/jessabean">
+        <svg class="icon icon-social">
+          <use xlink:href="#icon-github"></use>
+        </svg>
+      </a>
     </li>
-  {% endfor %}
-  </ol>
+    <li>
+      <a href="http://twitter.com/jessabean">
+        <svg class="icon icon-social">
+          <use xlink:href="#icon-twitter"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="http://dribbble.com/jessabean">
+        <svg class="icon icon-social">
+          <use xlink:href="#icon-dribbble"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.linkedin.com/in/jeldredge">
+        <svg class="icon icon-social">
+          <use xlink:href="#icon-linkedin"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:jessica@eldredge.io">
+        <svg class="icon icon-social">
+          <use xlink:href="#icon-mail"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
 </section>

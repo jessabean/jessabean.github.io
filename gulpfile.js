@@ -29,7 +29,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('_scss/main.scss')
+    return gulp.src('_scss/*.scss')
         .pipe(sass({
             includePaths: ['_scss'],
             onError: browserSync.notify

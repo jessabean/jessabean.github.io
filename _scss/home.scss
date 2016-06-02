@@ -1,0 +1,28 @@
+@import "util/normalize";
+
+@import "dependencies/variables";
+@import "dependencies/helpers";
+@import "dependencies/responsive";
+
+.home__header {
+  padding-top: 40px;
+  padding-right: calc((100% - #{$content-width}) / 2);
+  padding-bottom: 40px;
+  padding-left: calc((100% - #{$content-width}) / 2);
+  text-align: center;
+  background: url(/img/bg.jpg);
+  color: #fff;
+  
+  h1,
+  h2 {
+    margin-top: 0;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    border: none;
+  }
+}
