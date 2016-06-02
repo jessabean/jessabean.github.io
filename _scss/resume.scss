@@ -1,3 +1,11 @@
+@import "util/normalize";
+
+@import "dependencies/variables";
+@import "dependencies/helpers";
+@import "dependencies/responsive";
+@import "base/layout";
+@import "base/typography";
+@import "base/base";
 .resume {
   .global-nav {
     position: static;
