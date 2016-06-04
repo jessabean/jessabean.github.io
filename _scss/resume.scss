@@ -199,6 +199,7 @@
 @media print {
   .resume {
     font-size: 16px;
+    overflow: visible;
 
     p {
       font-size: 16px;
@@ -211,12 +212,14 @@
     .resume__header h1 {
       font-size: 32px;
       margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .resume-print {
+      display: none;
     }
     
     .resume__subtitle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin-bottom: 1.5rem;
       border-bottom: 1px solid $gray-lightest;
     }
@@ -224,11 +227,22 @@
     .resume__subtitle h2 {
       border: none;
       margin: 0;
-      flex: 2;
+    }
+
+    .flex {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .flex-cell {
+      flex: 1;
+    }
+
+    .flex-cell--right {
+      flex: none;
     }
 
     .resume__subtitle span {
-      flex: 1;
       position: relative;
     }
 
@@ -321,7 +335,12 @@
     }
 
     .page-break {
-      page-break-before: always;
+      break-before: always;
     }
+
+    @page { 
+      size: auto;
+      margin: 0.5cm; 
+    } 
   }
 }
