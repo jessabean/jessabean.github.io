@@ -691,6 +691,23 @@ blockquote {
       text-align: center; } }
 
 @media screen {
+    .resume__header .flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .resume__header .flex-cell {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+              flex: 0 1 auto; }
+      .resume__header .flex-cell:first-child {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+    .resume__header .flex-cell--right {
+      text-align: right; }
     .resume__header h1 {
       font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, serif;
       font-weight: normal;
@@ -702,19 +719,14 @@ blockquote {
       font-weight: normal;
       margin-top: 0;
       border: none; }
+    .resume__header .resume-print {
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      font-size: 14px;
+      text-transform: uppercase;
+      background: #88c3cd;
+      color: #fff; }
     .resume__header .resume__subtitle {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
       margin-bottom: 1.5rem;
       border-bottom: 1px solid #f2f2f2; }
       .resume__header .resume__subtitle h2 {

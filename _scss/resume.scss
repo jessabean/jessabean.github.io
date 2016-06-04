@@ -43,6 +43,22 @@
       text-align: center;
     }
 
+    .flex {
+      display: flex;
+    }
+
+    .flex-cell {
+      flex: 0 1 auto;
+
+      &:first-child {
+        flex: 1;
+      }
+    }
+
+    .flex-cell--right {
+      text-align: right;
+    }
+
     h1 {
       font-family: $serif;
       font-weight: normal;
@@ -58,10 +74,17 @@
       border: none;
     }
 
+    .resume-print {
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      font-size: 14px;
+      text-transform: uppercase;
+      background: $teal-light;
+      color: #fff;
+    }
+
+
     .resume__subtitle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin-bottom: 1.5rem;
       border-bottom: 1px solid $gray-lightest;
 
