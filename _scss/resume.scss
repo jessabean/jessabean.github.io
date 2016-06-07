@@ -45,6 +45,10 @@
 
     .flex {
       display: flex;
+
+      @include breakpoint(tablet-sm) {
+        flex-direction: column;
+      }
     }
 
     .flex-cell {
@@ -57,6 +61,10 @@
 
     .flex-cell--right {
       text-align: right;
+
+      @include breakpoint(tablet-sm) {
+        text-align: center;
+      }
     }
 
     h1 {
@@ -81,6 +89,10 @@
       text-transform: uppercase;
       background: $teal-light;
       color: #fff;
+
+      @include breakpoint(tablet-sm) {
+        display: none;
+      }
     }
 
 
@@ -102,6 +114,7 @@
   .resume__summary {
     @include breakpoint(tablet-sm) {
       font-size: 18px;
+      text-align: left;
     }
   }
 

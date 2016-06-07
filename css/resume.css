@@ -695,7 +695,16 @@ blockquote {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex; } }
+    @media screen and (max-width: 760px) {
+      .resume__header .flex {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+
+@media screen {
     .resume__header .flex-cell {
       -webkit-box-flex: 0;
       -webkit-flex: 0 1 auto;
@@ -707,7 +716,12 @@ blockquote {
             -ms-flex: 1;
                 flex: 1; }
     .resume__header .flex-cell--right {
-      text-align: right; }
+      text-align: right; } }
+    @media screen and (max-width: 760px) {
+      .resume__header .flex-cell--right {
+        text-align: center; } }
+
+@media screen {
     .resume__header h1 {
       font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, serif;
       font-weight: normal;
@@ -725,7 +739,12 @@ blockquote {
       font-size: 14px;
       text-transform: uppercase;
       background: #88c3cd;
-      color: #fff; }
+      color: #fff; } }
+    @media screen and (max-width: 760px) {
+      .resume__header .resume-print {
+        display: none; } }
+
+@media screen {
     .resume__header .resume__subtitle {
       margin-bottom: 1.5rem;
       border-bottom: 1px solid #f2f2f2; }
@@ -745,7 +764,8 @@ blockquote {
 
 @media screen and (max-width: 760px) {
   .resume__summary {
-    font-size: 18px; } }
+    font-size: 18px;
+    text-align: left; } }
 
 @media screen {
   .resume__section-header {
