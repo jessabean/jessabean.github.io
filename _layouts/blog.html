@@ -21,22 +21,22 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <header class="intro-header">
+    <header class="intro-header" role="banner">
       <h1>jessica eldredge</h1>
       <div class="callout callout-blog">
         <h2>thought scribbles on web design, development &amp; workflow</h2>
       </div>
 
       <nav class="global-nav">
-        <ul>
+        <ul role="navigation">
           <li><a href="/">Home</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="/about">About</a></li>
       </nav>
     </header>
-    <section id="main">
+    <main id="main" role="main">
       {{ content }}
-    </section>
+    </main>
     {% include footer.html %}
 
     {% include scripts.html %}
