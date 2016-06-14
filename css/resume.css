@@ -380,6 +380,16 @@ body {
       padding: 40px -webkit-calc((100% - 90%) / 2);
       padding: 40px calc((100% - 90%) / 2); } }
 
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
 /*
 * Symbolset
 * www.symbolset.com
@@ -625,12 +635,12 @@ p {
   margin-top: 0; }
 
 a {
-  color: #54a4b2;
+  color: #30808e;
   text-decoration: none; }
   a:hover {
     color: #d95648; }
   a:visited {
-    color: #54a4b2; }
+    color: #30808e; }
 
 ::-moz-selection {
   background: #d95648;
