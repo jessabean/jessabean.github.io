@@ -45,12 +45,29 @@ p {
 
 a {
   color: $link_color;
+  position: relative;
   text-decoration: none;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(3px);
+    height: 2px;
+    width: 100% ;
+    background-color: rgba($link_hover_color, 0);
+    transition: all 0.2s ease;
+  }
+
   &:hover {
     color: $link_hover_color;
   }
-  &:visited {
-    color: $link_color;
+
+  &:hover:after {
+    transform: translateY(0px);
+    background-color: rgba($link_hover_color, 1);
   }
 }
 

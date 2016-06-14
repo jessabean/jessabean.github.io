@@ -15,4 +15,9 @@
       margin-right: 15px;
     }
   }
+
+  a:after,
+  a:hover:after {
+    display: none;
+  }
 }

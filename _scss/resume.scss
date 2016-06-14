@@ -89,6 +89,15 @@
       text-transform: uppercase;
       background: $teal-light;
       color: #fff;
+      transition: all 0.2s ease;
+
+      &:after {
+        display: none;
+      }
+
+      &:hover {
+        background: $pink;
+      }
 
       @include breakpoint(tablet-sm) {
         display: none;
