@@ -37,10 +37,13 @@ h3 {
 }
 
 p {
-  font-size: $base_font_size;
   line-height: $base_line_height;
   margin-bottom: 32px;
   margin-top: 0;
+
+  @include breakpoint(tablet-sm) {
+    margin-bottom: 20px;
+  }
 }
 
 a {
@@ -81,12 +84,22 @@ a {
   color: $white;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 figure {
-  margin-bottom: 32px;
+  margin: 0;
   text-align: center;
+
+  .post & {
+    margin-bottom: 32px;
+  }
 }
 
 figcaption {
+  margin-top: 10px;
   font-size: 18px;
   font-style: italic;
   text-align: center;

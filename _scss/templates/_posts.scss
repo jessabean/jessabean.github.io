@@ -42,7 +42,6 @@
 .post-img {
   display: block;
   margin: 32px 0;
-  margin-left: -$post-image-offset;
   @include breakpoint(tablet-sm) {
     max-width: 100%;
     margin: 20px auto;

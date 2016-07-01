@@ -608,7 +608,7 @@ body {
   background: #fff;
   color: #333;
   font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, serif;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.5;
   padding: 0;
   text-align: left; }
@@ -634,10 +634,12 @@ h3 {
   font-weight: bold; }
 
 p {
-  font-size: 22px;
   line-height: 1.5;
   margin-bottom: 32px;
   margin-top: 0; }
+  @media (max-width: 760px) {
+    p {
+      margin-bottom: 20px; } }
 
 a {
   color: #30808e;
@@ -673,11 +675,18 @@ a {
   background: #d95648;
   color: #fff; }
 
+img {
+  display: block;
+  max-width: 100%; }
+
 figure {
-  margin-bottom: 32px;
+  margin: 0;
   text-align: center; }
+  .post figure {
+    margin-bottom: 32px; }
 
 figcaption {
+  margin-top: 10px;
   font-size: 18px;
   font-style: italic;
   text-align: center; }
@@ -873,7 +882,7 @@ pre[class*="language-"] code {
   .post-footer .post-date {
     display: block;
     font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, serif;
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 10px;
     text-transform: none; }
 
@@ -886,8 +895,7 @@ pre[class*="language-"] code {
 
 .post-img {
   display: block;
-  margin: 32px 0;
-  margin-left: -75px; }
+  margin: 32px 0; }
   @media (max-width: 760px) {
     .post-img {
       max-width: 100%;
