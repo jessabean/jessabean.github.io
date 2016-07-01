@@ -2,8 +2,12 @@
 
 var projectList     = document.getElementById('selected-projects');
 var detailsView     = document.getElementById('project-details');
+var detailsClose    = detailsView.querySelector('.button--close');
+var previewImageView   = detailsView.querySelector('.project__image');
+var previewDescription = detailsView.querySelector('.project__description');
 
 projectList.addEventListener('click', showDetails, false);
+detailsClose.addEventListener('click', hideDetails, false);
 
 function showDetails(e) {
   var target = event.target;
@@ -13,9 +17,6 @@ function showDetails(e) {
   var src     = image.getAttribute('src');
   var detail  = project.querySelector('.js-project__description');
   var content = detail.outerHTML;
-
-  var previewImageView   = detailsView.querySelector('.project__image');
-  var previewDescription = detailsView.querySelector('.project__description');
 
   e.preventDefault();
 
@@ -27,3 +28,9 @@ function showDetails(e) {
 
   detailsView.classList.add('is-active');
 };
+
+function hideDetails(e) {
+  detailsView.classList.remove('is-active');
+  previewImageView.innerHTML = '';
+  previewDescription.innerHTML = '';
+}
