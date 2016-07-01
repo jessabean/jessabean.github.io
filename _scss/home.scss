@@ -8,6 +8,8 @@
 @import "base/typography";
 @import "base/base";
 
+@import "components/project";
+
 .home__header {
   padding-top: 30px;
   padding-right: calc((100% - #{$content-width}) / 2);
@@ -34,18 +36,32 @@
   }
 }
 
-.home__body {
-  padding: 40px $content-padding;
-
-  @include breakpoint(tablet-sm) {
-    $content-padding: calc((100% - 90%) / 2);
-    padding: 40px $content-padding;
-  }
+.page-region {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-p {
+.page-width {
   @include breakpoint(tablet-sm) {
-    font-size: 16px;
-    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  padding-left: $content-padding;
+  padding-right: $content-padding;
+}
+
+.call-out {
+  color: #fff;
+  background: $pink;
+  padding: 20px;
+
+  h2 {
+    color: #fff;
+    border: none;
+    text-align: center;
+  }
+
+  a {
   }
 }

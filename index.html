@@ -3,7 +3,7 @@ layout: home
 title: Jessica Eldredge
 ---
 
-<section>
+<section class="page-region page-width">
   <p>I'm a front-end developer with 10 years of experience building things on the web. I used to work at Shopify, building the UI and styleguide for the <a href="https://www.shopify.com/online">store admin</a>. And before that, I was building <a href="http://merchant.livingsocial.com">merchant products</a> at LivingSocial.</p>
 
   <p>When I'm away from the computer, I love to <a href="https://projeqt.com/jessabean">sketchnote</a> (so much I gave a <a href="http://confreaks.tv/presenters/jessica-eldredge">talk about it</a> 3 times), <a href="https://www.goodreads.com/user/show/5507405-jessabean">read</a>, and sometimes do <a href="https://www.tumblr.com/blog/shakespeare-club">both at the same time</a>! I also have serious <a href="http://roaming.eldredge.io">wanderlust</a>.</p>
@@ -13,11 +13,105 @@ title: Jessica Eldredge
   <figure>
     {% include image.html
             img="img/excited.jpg"
-            title="Jess Eldredge looking really excited"
-            class="post-img" %}
+            title="Jess Eldredge looking really excited" %}
     <figcaption>I'm so excited!!!</figcaption>
   </figure>
+</section>
+<section class="page-region call-out">
+  <h2>Selected Projects</h2>
+  <ul class="project-list" id="selected-projects">
+    <li class="project">
+      <a href="#project1" class="project__link">
+        <figure class="project__image">
+          {% include image.html
+                  img="img/shopify-thumb.jpg"
+                  title="Shopify admin" %}
+          <figcaption>Shopify Admin</figcaption>
+        </figure>
+      </a>
+      <div class="project__description js-project__description" id="project1">
+        <h3>Shopify Admin</h3>
+        <p>As a front end developer on the admin team, I helped build the user interface Shopify admin features like order management and barcode printing. I was also actively involved in the creation of a UI pattern library and redesign of the admin tool.</p>
 
+        <div class="project__tech"><strong>Tech:</strong> HTML, CSS/Sass, Ruby on Rails, JavaScript, jQuery, CoffeeScript</div>
+      </div>
+    </li>
+    <li class="project">
+      <a href="#project2" class="project__link">
+        <figure class="project__image">
+          {% include image.html
+                  img="img/livingsocial-thumb.jpg"
+                  title="LivingSocial Merchant Center" %}
+          <figcaption>LivingSocial Merchant Center</figcaption>
+        </figure>
+      </a>
+      <div class="project__description js-project__description" id="project2">
+        <h3>LivingSocial Merchant Center</h3>
+        <p>I built the user interface for many merchant center features, including payment tracking, voucher redemption, and a dashboard to view stats about currently-running promotions. I also mentored junior developers.</p>
+
+        <div class="project__tech"><strong>Tech:</strong> HTML, CSS/Sass, JavaScript, jQuery, Ruby on Rails</div>
+      </div>
+    </li>
+    <li class="project">
+      <a href="#project3" class="project__link">
+        <figure class="project__image">
+          {% include image.html
+                  img="img/periodic-thumb.jpg"
+                  title="Periodic Table of Typefaces" %}
+          <figcaption>Periodic Table of Typefaces</figcaption>
+        </figure>
+      </a>
+      <div class="project__description js-project__description" id="project3">
+        <h3>Periodic Table of Typefaces</h3>
+        <p>Inspired by Cam Wilde's <a href="https://www.behance.net/Gallery/Periodic-Table-of-Typefaces/193759">Periodic Table of Typefaces print</a>, I built a fully responsive, interactive version featuring hover states and modals with more background on each typeface.</p>
+
+        <div class="project__tech"><strong>Tech:</strong> CSS/Sass, JavaScript, jQuery, JSON, HTML, Mustache, Gulp</div>
+      </div>
+    </li>
+    <li class="project">
+      <a href="#project4" class="project__link">
+        <figure class="project__image">
+          {% include image.html
+                  img="img/js-thumb.jpg"
+                  title="100 JavaScript Projects" %}
+          <figcaption>100 JavaScript Projects</figcaption>
+        </figure>
+      </a>
+      <div class="project__description js-project__description" id="project4">
+        <h3>100 JavaScript Projects</h3>
+        <p>Inspired by Jennifer Dewalt's <a href="https://jenniferdewalt.com/index.html">180 Projects in 180 Days</a> and Elle Luna's <a href="https://thegreatdiscontent.com/100days">The 100 Day Project</a>, I have committed to doing 100 small projects focused soley on learning JavaScript.</p>
+
+        <div class="project__tech"><strong>Tech:</strong> CSS/Sass, JavaScript, jQuery, JSON, HTML, Mustache, Gulp</div>
+      </div>
+    </li>
+    <li class="project">
+      <a href="#project5" class="project__link">
+        <figure class="project__image">
+          {% include image.html
+                  img="img/current-thumb.jpg"
+                  title="Current.sh" %}
+          <figcaption>Current.sh Beta</figcaption>
+        </figure>
+      </a>
+      <div class="project__description js-project__description" id="project5">
+        <h3>Current.sh</h3>
+        <p>I designed user flow, developed wireframes, and helped build the UI for the beta version of current.sh, a log management tool. </p>
+
+        <div class="project__tech"><strong>Tech:</strong> UX/wireframes, CSS/Sass, Ember.js</div>
+      </div>
+    </li>
+  </ul>
+  <div id="project-details" class="project--preview">
+    <div class="project__actions">
+      <svg id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="currentcolor">
+        <path d="M4 8 L8 4 L16 12 L24 4 L28 8 L20 16 L28 24 L24 28 L16 20 L8 28 L4 24 L12 16 z"></path>
+      </svg>
+    </div>
+    <figure class="project__image"></figure>
+    <div class="project__description"></div>
+  </div>
+</section>
+<section class="page-region page-width">
   <p>If you'd like to hire me, have a look at my <a href="/resume">resume</a>. Or check out what else I'm doing on the internet:</p>
   <ul class="social-links">
     <li>
