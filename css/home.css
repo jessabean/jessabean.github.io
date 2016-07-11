@@ -750,7 +750,8 @@ blockquote {
 .project__link {
   display: block; }
   .project__link:hover, .project__link:focus {
-    cursor: pointer; }
+    cursor: pointer;
+    border: none; }
     .project__link:hover figcaption, .project__link:focus figcaption {
       opacity: 1;
       -webkit-transform: translateY(0px);
