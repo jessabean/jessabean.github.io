@@ -805,6 +805,9 @@ blockquote {
     pointer-events: auto;
     -webkit-transform: translate3d(0, 0, 0) translate3d(0, -100%, 0);
             transform: translate3d(0, 0, 0) translate3d(0, -100%, 0); }
+  @media (max-width: 760px) {
+    .project--preview {
+      padding: 20px; } }
   .project--preview .project__actions {
     padding: 20px 0;
     text-align: right; }

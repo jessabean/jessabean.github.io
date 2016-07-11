@@ -92,6 +92,10 @@
     transform: translate3d(0, 0, 0) translate3d(0, -100%, 0);
   }
 
+  @include breakpoint(tablet-sm) {
+    padding: 20px;
+  };
+
   .project__actions {
     padding: 20px 0;
     text-align: right;
