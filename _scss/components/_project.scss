@@ -28,6 +28,7 @@
   max-width: 580px; // actual width of image files
   margin: 0 auto;
   color: #fff;
+  overflow: hidden;
 
   img {
     display: block;
@@ -38,11 +39,15 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 2px 0;
-    text-align: center;
+    transform: translateY(100%);
+    backface-visibility: hidden;
+    opacity: 0;
+    padding: 10px;
+    font-family: $sans;
+    font-size: 16px;
     font-style: normal;
     background: $gray;
-    transition: all 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, opacity 0.1s 0.3s;
   }
 }
 
@@ -54,7 +59,9 @@
     cursor: pointer;
 
     figcaption {
-      padding: 10px 0;
+      opacity: 1;
+      transform: translateY(0px);
+      transition: transform 0.4s, opacity 0.1s;
     }
   }
 }
@@ -76,7 +83,6 @@
   padding-right: $content-padding;
   background: $pink;
   pointer-events: none;
-  transition: height 0.1s ease-out;
 
   &.is-active {
     height: 100%;

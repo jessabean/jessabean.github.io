@@ -738,7 +738,8 @@ blockquote {
   position: relative;
   max-width: 580px;
   margin: 0 auto;
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
   .project__image img {
     display: block;
     max-width: 100%; }
@@ -746,19 +747,35 @@ blockquote {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 2px 0;
-    text-align: center;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    opacity: 0;
+    padding: 10px;
+    font-family: "open-sans-1", "open-sans-2", Helvetica, Arial, sans-serif;
+    font-size: 16px;
     font-style: normal;
     background: #333;
-    -webkit-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out; }
+    -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.1s ease-in-out;
+    transition: opacity 0.1s 0.3s, -webkit-transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, opacity 0.1s 0.3s;
+    transition: transform 0.1s ease-in-out, opacity 0.1s 0.3s, -webkit-transform 0.1s ease-in-out; }
 
 .project__link {
   display: block; }
   .project__link:hover, .project__link:focus {
     cursor: pointer; }
     .project__link:hover figcaption, .project__link:focus figcaption {
-      padding: 10px 0; }
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+          -ms-transform: translateY(0px);
+              transform: translateY(0px);
+      -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
+      transition: opacity 0.1s, -webkit-transform 0.4s;
+      transition: transform 0.4s, opacity 0.1s;
+      transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s; }
 
 .project-list .project__description {
   display: none; }
@@ -777,9 +794,7 @@ blockquote {
   padding-right: -webkit-calc((100% - 600px) / 2);
   padding-right: calc((100% - 600px) / 2);
   background: #d95648;
-  pointer-events: none;
-  -webkit-transition: height 0.1s ease-out;
-  transition: height 0.1s ease-out; }
+  pointer-events: none; }
   .project--preview.is-active {
     height: 100%;
     visibility: visible;
