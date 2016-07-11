@@ -51,26 +51,10 @@ a {
   position: relative;
   text-decoration: none;
 
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    transform: translateY(3px);
-    height: 2px;
-    width: 100% ;
-    background-color: rgba($link_hover_color, 0);
-    transition: all 0.2s ease;
-  }
-
-  &:hover {
+  &:hover,
+  &:focus {
     color: $link_hover_color;
-  }
-
-  &:hover:after {
-    transform: translateY(0px);
-    background-color: rgba($link_hover_color, 1);
+    border-bottom: 2px solid $link_hover_color;
   }
 }
 
