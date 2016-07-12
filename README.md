@@ -6,11 +6,11 @@ Source code for [jessica-eldredge.com](http://jessica-eldredge.com)
 ## To Do:
 - [x] Fix SVG icons
 - [x] Update about page
-- [ ] Add resume
+- [x] Add resume
 - [ ] Add a "now" page
 - [ ] Add speaking page
 - [ ] Add search
-- [ ] Accessibility improvements
+- [x] Accessibility improvements
 - [ ] JS and SCSS linting
 
 ## Powered By:
