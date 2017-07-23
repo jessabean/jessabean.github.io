@@ -9,15 +9,19 @@
 
     <link rel="alternate" type="application/rss+xml" href="/feed.xml">
 
+    <link rel="stylesheet" href="/css/main.css">
+
     <script type="text/javascript" src="//use.typekit.net/nvf6gkk.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   </head>
   <body>
+    {% include icon-data.svg %}
     {% include nav.html %}
-    {% include masthead.html %}
     <main id="main" role="main">
       {{ content }}
     </main>
+    {% include footer.html %}
+    {% include scripts.html %}
   </body>
 </html>
