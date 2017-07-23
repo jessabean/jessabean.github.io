@@ -7,9 +7,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/home.css">
-
     <link rel="alternate" type="application/rss+xml" href="/feed.xml">
 
     <script type="text/javascript" src="//use.typekit.net/nvf6gkk.js"></script>
@@ -17,16 +14,10 @@
 
   </head>
   <body>
-    {% include icon-data.svg %}
-    {% include header.html %}
+    {% include nav.html %}
+    {% include masthead.html %}
     <main id="main" role="main">
       {{ content }}
     </main>
-    {% include project-details.html %}
-
-    {% include footer.html %}
-
-    {% include scripts.html %}
-
   </body>
 </html>
