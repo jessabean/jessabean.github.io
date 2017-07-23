@@ -101,7 +101,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -372,11 +373,11 @@ html,
 body {
   margin: 0; }
 
-#main {
+.page-width {
   padding: 40px -webkit-calc((100% - 600px) / 2);
   padding: 40px calc((100% - 600px) / 2); }
   @media (max-width: 760px) {
-    #main {
+    .page-width {
       padding: 40px -webkit-calc((100% - 90%) / 2);
       padding: 40px calc((100% - 90%) / 2); } }
 
@@ -758,6 +759,7 @@ blockquote {
       background: #88c3cd;
       color: #fff;
       -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
       .resume__header .resume-print:after {
         display: none; }

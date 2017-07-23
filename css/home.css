@@ -101,7 +101,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -372,11 +373,11 @@ html,
 body {
   margin: 0; }
 
-#main {
+.page-width {
   padding: 40px -webkit-calc((100% - 600px) / 2);
   padding: 40px calc((100% - 600px) / 2); }
   @media (max-width: 760px) {
-    #main {
+    .page-width {
       padding: 40px -webkit-calc((100% - 90%) / 2);
       padding: 40px calc((100% - 90%) / 2); } }
 
@@ -742,6 +743,7 @@ blockquote {
     background: #333;
     -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.1s ease-in-out;
     transition: opacity 0.1s 0.3s, -webkit-transform 0.1s ease-in-out;
+    -o-transition: transform 0.1s ease-in-out, opacity 0.1s 0.3s;
     transition: transform 0.1s ease-in-out, opacity 0.1s 0.3s;
     transition: transform 0.1s ease-in-out, opacity 0.1s 0.3s, -webkit-transform 0.1s ease-in-out; }
 
@@ -757,6 +759,7 @@ blockquote {
               transform: translateY(0px);
       -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
       transition: opacity 0.1s, -webkit-transform 0.4s;
+      -o-transition: transform 0.4s, opacity 0.1s;
       transition: transform 0.4s, opacity 0.1s;
       transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s; }
 
@@ -775,9 +778,11 @@ blockquote {
   color: #fff;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+       -o-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
           transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
   .project--preview.is-active {
     height: 100%;
@@ -799,6 +804,7 @@ blockquote {
     color: #fff;
     -webkit-transition: -webkit-transform 0.1s ease-in-out;
     transition: -webkit-transform 0.1s ease-in-out;
+    -o-transition: transform 0.1s ease-in-out;
     transition: transform 0.1s ease-in-out;
     transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out; }
     .project--preview .button:hover, .project--preview .button:focus {

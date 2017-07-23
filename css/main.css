@@ -101,7 +101,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -377,11 +378,11 @@ html,
 body {
   margin: 0; }
 
-#main {
+.page-width {
   padding: 40px -webkit-calc((100% - 600px) / 2);
   padding: 40px calc((100% - 600px) / 2); }
   @media (max-width: 760px) {
-    #main {
+    .page-width {
       padding: 40px -webkit-calc((100% - 90%) / 2);
       padding: 40px calc((100% - 90%) / 2); } }
 
@@ -695,6 +696,7 @@ blockquote {
 .icon-social {
   fill: #d95648;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .icon-social:hover {
     fill: #30808e; }
@@ -819,14 +821,16 @@ pre[class*="language-"] code {
   background: url(/img/monitor.svg) no-repeat; }
   @media (max-width: 760px) {
     .callout-default {
-      background-size: contain;
+      -webkit-background-size: contain;
+              background-size: contain;
       background-position: left bottom; } }
 
 .callout-blog {
   background: url(/img/pencil.svg) 0 0 no-repeat; }
   @media (max-width: 760px) {
     .callout-blog {
-      background-size: contain;
+      -webkit-background-size: contain;
+              background-size: contain;
       background-position: left bottom; } }
   .callout-blog h2 {
     padding-right: 150px; }

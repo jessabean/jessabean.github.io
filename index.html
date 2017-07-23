@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: Jessica Eldredge
 ---
 
@@ -17,117 +17,12 @@ title: Jessica Eldredge
     <figcaption>I'm so excited!!!</figcaption>
   </figure>
 </section>
+
 <section class="page-region call-out">
   <h2>Selected Projects</h2>
-  <ul class="project-list" id="selected-projects">
-    <li class="project">
-      <a href="#project1" class="project__link">
-        <figure class="project__image">
-          {% include image.html
-                  img="img/shopify-thumb.jpg"
-                  title="Shopify admin" %}
-          <figcaption>Shopify Admin</figcaption>
-        </figure>
-      </a>
-      <div class="project__description js-project__description" id="project1">
-        <h3>Shopify Admin <span class="project__visitlink"><a href="https://www.shopify.com/login" target="_blank">Visit project</a></span></h3>
-        <p>As a front end developer on the admin team, I helped build the user interface Shopify admin features like order management and barcode printing. I was also actively involved in the creation of a UI pattern library and redesign of the admin tool.</p>
-
-        <p><strong>Tech:</strong> HTML, CSS/Sass, Ruby on Rails, JavaScript, jQuery, CoffeeScript</p>
-      </div>
-    </li>
-    <li class="project">
-      <a href="#project2" class="project__link">
-        <figure class="project__image">
-          {% include image.html
-                  img="img/livingsocial-thumb.jpg"
-                  title="LivingSocial Merchant Center" %}
-          <figcaption>LivingSocial Merchant Center</figcaption>
-        </figure>
-      </a>
-      <div class="project__description js-project__description" id="project2">
-        <h3>LivingSocial Merchant Center <span class="project__visitlink"><a href="https://merchant.livingsocial.com/welcome" target="_blank">Visit project</a></span></h3>
-        <p>I built the user interface for many merchant center features, including payment tracking, voucher redemption, and a dashboard to view stats about currently-running promotions. I also mentored junior developers.</p>
-
-        <p><strong>Tech:</strong> HTML, CSS/Sass, JavaScript, jQuery, Ruby on Rails</p>
-      </div>
-    </li>
-    <li class="project">
-      <a href="#project3" class="project__link">
-        <figure class="project__image">
-          {% include image.html
-                  img="img/periodic-thumb.jpg"
-                  title="Periodic Table of Typefaces" %}
-          <figcaption>Periodic Table of Typefaces</figcaption>
-        </figure>
-      </a>
-      <div class="project__description js-project__description" id="project3">
-        <h3>Periodic Table of Typefaces <span class="project__visitlink"><a href="http://jessica-eldredge.com/periodic_table_typefaces/" target="_blank">Visit project</a></span></h3>
-        <p>Inspired by Cam Wilde's <a href="https://www.behance.net/Gallery/Periodic-Table-of-Typefaces/193759">Periodic Table of Typefaces print</a>, I built a fully responsive, interactive version featuring hover states and modals with more background on each typeface.</p>
-
-        <p><strong>Tech:</strong> CSS/Sass, JavaScript, jQuery, JSON, HTML, Mustache, Gulp</p>
-      </div>
-    </li>
-    <li class="project">
-      <a href="#project4" class="project__link">
-        <figure class="project__image">
-          {% include image.html
-                  img="img/js-thumb.jpg"
-                  title="100 JavaScript Projects" %}
-          <figcaption>100 JavaScript Projects</figcaption>
-        </figure>
-      </a>
-      <div class="project__description js-project__description" id="project4">
-        <h3>100 JavaScript Projects <span class="project__visitlink"><a href="http://jessica-eldredge.com/100-javascript-projects/" target="_blank">Visit project</a></span></h3>
-        <p>Inspired by Jennifer Dewalt's <a href="https://jenniferdewalt.com/index.html">180 Projects in 180 Days</a> and Elle Luna's <a href="https://thegreatdiscontent.com/100days">The 100 Day Project</a>, I have committed to doing 100 small projects focused soley on learning JavaScript.</p>
-
-        <p><strong>Tech:</strong> CSS/Sass, JavaScript, jQuery, JSON, HTML, Mustache, Gulp</p>
-      </div>
-    </li>
-  </ul>
+  {% include project-list.html %}
 </section>
+
 <section class="page-region page-width">
   <p>If you'd like to hire me, have a look at my <a href="/resume">resume</a>. Or check out what else I'm doing on the internet:</p>
-  <ul class="social-links">
-    <li>
-      <a href="http://github.com/jessabean">
-        <span class="visually-hidden">Github</span>
-        <svg class="icon icon-social">
-          <use xlink:href="#icon-github"></use>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a href="http://twitter.com/jessabean">
-        <span class="visually-hidden">Twitter</span>
-        <svg class="icon icon-social">
-          <use xlink:href="#icon-twitter"></use>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a href="http://dribbble.com/jessabean">
-        <span class="visually-hidden">Dribbble</span>
-        <svg class="icon icon-social">
-          <use xlink:href="#icon-dribbble"></use>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a href="http://www.linkedin.com/in/jeldredge">
-        <span class="visually-hidden">LinkedIn</span>
-        <svg class="icon icon-social">
-          <use xlink:href="#icon-linkedin"></use>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a href="mailto:jessica@eldredge.io">
-        <span class="visually-hidden">Email</span>
-        <svg class="icon icon-social">
-          <use xlink:href="#icon-mail"></use>
-        </svg>
-      </a>
-    </li>
-  </ul>
 </section>

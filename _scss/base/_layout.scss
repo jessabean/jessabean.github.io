@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-#main {
+.page-width {
   padding: 40px $content-padding;
 
   @include breakpoint(tablet-sm) {
