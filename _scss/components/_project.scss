@@ -1,9 +1,18 @@
+$content-padding: calc((100% - #{$content-width}) / 2);
+
+.projects h2 {
+  text-align: center;
+  max-width: 1400px;
+  margin: 40px auto 20px;
+  border: none;
+}
+
 .project-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
-  margin: 0 auto; 
+  margin: 0 auto 80px; 
   padding: 0;
   max-width: 800px;
 

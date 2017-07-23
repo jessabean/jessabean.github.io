@@ -10,6 +10,11 @@
     <link rel="alternate" type="application/rss+xml" href="/feed.xml">
 
     <link rel="stylesheet" href="/css/main.css">
+    {% if page.custom_css %}
+      {% for stylesheet in page.custom_css %}
+        <link rel="stylesheet" href="/css/{{ stylesheet }}.css" media="screen" type="text/css">
+      {% endfor %}
+    {% endif %}
 
     <script type="text/javascript" src="//use.typekit.net/nvf6gkk.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
