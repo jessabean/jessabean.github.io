@@ -7,7 +7,8 @@ $black:       #000;
 $beige:       #f1eee9;
 $teal:        #30808e;
 $teal-light:  #88c3cd;
-$pink:        #d95648;
+$pink:        #db3b69;
+$aqua:       #38ad93;
 
 $gray:          #333;
 $gray-light:    lighten($gray, 50%);
@@ -27,7 +28,7 @@ $base_line_height: 1.5;
 $text_color: $gray;
 $text_subdued: $gray-light;
 
-$link_color: $teal;
+$link_color: $aqua;
 $link_hover_color: $pink;
 
 // ===========================================================================

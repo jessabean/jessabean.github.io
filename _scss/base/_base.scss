@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: $white;
   color: $text_color;
@@ -10,6 +16,10 @@ body {
   line-height: $base_line_height;
   padding: 0;
   text-align: left;
+}
+
+main {
+  padding: 20px;
 }
 
 h1,
@@ -49,12 +59,12 @@ p {
 a {
   color: $link_color;
   position: relative;
-  text-decoration: none;
+  text-decoration-skip: ink;
 
   &:hover,
   &:focus {
     color: $link_hover_color;
-    border-bottom: 2px solid $link_hover_color;
+    text-decoration: none;
   }
 }
 

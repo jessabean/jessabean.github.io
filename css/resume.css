@@ -598,6 +598,11 @@ html:hover [class^="ss-"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+html,
+body {
+  padding: 0;
+  margin: 0; }
+
 body {
   background: #fff;
   color: #333;
@@ -606,6 +611,9 @@ body {
   line-height: 1.5;
   padding: 0;
   text-align: left; }
+
+main {
+  padding: 20px; }
 
 h1,
 h2,
@@ -636,19 +644,20 @@ p {
       margin-bottom: 20px; } }
 
 a {
-  color: #30808e;
+  color: #38ad93;
   position: relative;
-  text-decoration: none; }
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink; }
   a:hover, a:focus {
-    color: #d95648;
-    border-bottom: 2px solid #d95648; }
+    color: #db3b69;
+    text-decoration: none; }
 
 ::-moz-selection {
-  background: #d95648;
+  background: #db3b69;
   color: #fff; }
 
 ::selection {
-  background: #d95648;
+  background: #db3b69;
   color: #fff; }
 
 img {
@@ -690,7 +699,7 @@ blockquote {
   .resume .global-nav a:visited {
     color: #fff; }
   .resume__header {
-    background: url(/img/bg.jpg);
+    background: #38ad93;
     color: #fff;
     padding-top: 40px;
     padding-right: -webkit-calc((100% - 600px) / 2);
@@ -764,7 +773,7 @@ blockquote {
       .resume__header .resume-print:after {
         display: none; }
       .resume__header .resume-print:hover {
-        background: #d95648; } }
+        background: #db3b69; } }
     @media screen and (max-width: 760px) {
       .resume__header .resume-print {
         display: none; } }

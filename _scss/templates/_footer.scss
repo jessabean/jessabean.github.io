@@ -16,8 +16,11 @@
     }
   }
 
-  a:after,
-  a:hover:after {
-    display: none;
+  a {
+    display: block;
+  }
+
+  a:hover {
+    border: none;
   }
 }
