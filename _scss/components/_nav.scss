@@ -1,4 +1,4 @@
-$nav-padding: calc((100% - 800px) / 2);
+$nav-padding: calc((100% - #{$content-width}) / 2);
 
 .global-nav {
   display: flex;
@@ -14,7 +14,7 @@ $nav-padding: calc((100% - 800px) / 2);
 }
 
 .global-nav__brand {
-  font-family: $sans;
+  font-family: $font-sans;
   font-weight: bold;
   font-size: 18px;
   color: $white;

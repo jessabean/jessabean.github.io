@@ -1,6 +1,7 @@
 @import "util/normalize";
 
-@import "dependencies/variables";
+@import "settings/settings";
+
 @import "dependencies/helpers";
 @import "dependencies/responsive";
 
@@ -11,6 +12,8 @@
 @import "components/nav";
 @import "components/icon";
 @import "components/code";
+@import "components/masthead";
+@import "components/project";
 
 @import "templates/footer";
 @import "templates/posts";

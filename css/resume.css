@@ -379,8 +379,8 @@ body {
   margin: 0; }
 
 .page-width {
-  padding: 40px -webkit-calc((100% - 600px) / 2);
-  padding: 40px calc((100% - 600px) / 2); }
+  padding: 40px -webkit-calc((100% - 48em) / 2);
+  padding: 40px calc((100% - 48em) / 2); }
   @media (max-width: 760px) {
     .page-width {
       padding: 40px -webkit-calc((100% - 90%) / 2);
@@ -603,6 +603,9 @@ html:hover [class^="ss-"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+html {
+  font-size: 18px; }
+
 html,
 body {
   padding: 0;
@@ -612,7 +615,7 @@ body {
   background: #fff;
   color: #333;
   font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, serif;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.5;
   padding: 0;
   text-align: left; }
@@ -708,8 +711,8 @@ blockquote {
       -ms-flex-align: center;
           align-items: center;
   background: #db3b69;
-  padding: 0 -webkit-calc((100% - 800px) / 2);
-  padding: 0 calc((100% - 800px) / 2); }
+  padding: 0 -webkit-calc((100% - 48em) / 2);
+  padding: 0 calc((100% - 48em) / 2); }
   @media (max-width: 760px) {
     .global-nav {
       padding: 0 -webkit-calc((100% - 90%) / 2);
@@ -764,11 +767,11 @@ blockquote {
 @media screen {
   .resume__header {
     padding-top: 40px;
-    padding-right: -webkit-calc((100% - 600px) / 2);
-    padding-right: calc((100% - 600px) / 2);
+    padding-right: -webkit-calc((100% - 48em) / 2);
+    padding-right: calc((100% - 48em) / 2);
     padding-bottom: 40px;
-    padding-left: -webkit-calc((100% - 600px) / 2);
-    padding-left: calc((100% - 600px) / 2);
+    padding-left: -webkit-calc((100% - 48em) / 2);
+    padding-left: calc((100% - 48em) / 2);
     position: relative; } }
   @media screen and (max-width: 600px) {
     .resume__header {
@@ -869,8 +872,8 @@ blockquote {
   .resume__section-header {
     border-bottom: 1px solid #f2f2f2; }
   .resume__body {
-    padding: 40px -webkit-calc((100% - 600px) / 2);
-    padding: 40px calc((100% - 600px) / 2);
+    padding: 40px -webkit-calc((100% - 48em) / 2);
+    padding: 40px calc((100% - 48em) / 2);
     font-size: 16px; } }
   @media screen and (max-width: 760px) {
     .resume__body {

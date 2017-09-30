@@ -1,10 +1,10 @@
 .masthead {
-  max-width: 800px;
+  max-width: $content-width;
   margin: 0 auto;
   padding: 40px 0;
 
   h1 {
-    font-family: $sans;
+    font-family: $font-sans;
     font-weight: bold;
     text-align: center;
   }

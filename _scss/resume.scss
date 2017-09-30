@@ -1,6 +1,7 @@
 @import "util/normalize";
 
-@import "dependencies/variables";
+@import "settings/settings";
+
 @import "dependencies/helpers";
 @import "dependencies/responsive";
 
@@ -54,7 +55,7 @@
     }
 
     h1 {
-      font-family: $serif;
+      font-family: $font-serif;
       font-weight: normal;
       line-height: 1;
       margin-top: 0;
@@ -137,7 +138,7 @@
 
   .entry__header {
     display: flex;
-    font-family: $sans;
+    font-family: $font-sans;
 
     @include breakpoint(tablet-sm) {
       flex-direction: column;
@@ -201,7 +202,7 @@
   }
 
   .resume__footer-header {
-    font-family: $serif;
+    font-family: $font-serif;
     font-size: 36px;
     margin-bottom: 0.5rem;
     margin-top: 0;
@@ -311,7 +312,7 @@
 
     .entry__header {
       display: flex;
-      font-family: $sans;
+      font-family: $font-sans;
     }
 
     .entry__description {

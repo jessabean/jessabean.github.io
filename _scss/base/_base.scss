@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 18px;
+}
+
 html,
 body {
   padding: 0;
@@ -10,10 +14,10 @@ body {
 
 body {
   background: $white;
-  color: $text_color;
-  font-family: $serif;
-  font-size: $base_font_size;
-  line-height: $base_line_height;
+  color: $gray;
+  font-family: $font-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
   padding: 0;
   text-align: left;
 }
@@ -34,20 +38,20 @@ h1 {
 
 h2 {
   border-bottom: 1px solid $gray-lightest;
-  font-family: $sans;
+  font-family: $font-sans;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 h3 {
-  font-family: $sans;
+  font-family: $font-sans;
   font-size: 18px;
   font-weight: bold;
 }
 
 p {
-  line-height: $base_line_height;
+  line-height: $base-line-height;
   margin-bottom: 32px;
   margin-top: 0;
 
@@ -57,24 +61,24 @@ p {
 }
 
 a {
-  color: $link_color;
+  color: $aqua;
   position: relative;
   text-decoration-skip: ink;
 
   &:hover,
   &:focus {
-    color: $link_hover_color;
+    color: $pink;
     text-decoration: none;
   }
 }
 
 ::-moz-selection {
-  background: $link_hover_color;
+  background: $pink;
   color: $white;
 }
 
 ::selection {
-  background: $link_hover_color;
+  background: $pink;
   color: $white;
 }
 
@@ -100,8 +104,8 @@ figcaption {
 }
 
 blockquote {
-  margin-left: -$blockquote-offset;
-  width: $blockquote-width;
+  margin-left: -75px;
+  width: 750px;
   p {
     font-size: 26px;
     font-style: italic;

@@ -8,22 +8,22 @@
     margin-bottom: 0;
   }
   .post-meta {
-    color: $text_subdued;
+    color: $gray-light;
   }
 }
 
 .post-footer {
   border-top: 1px solid $gray-lightest;
-  color: $text_subdued;
-  font-family: $sans;
+  color: $gray-light;
+  font-family: $font-sans;
   font-size: 16px;
   margin-top: 20px;
   padding-top: 20px;
   text-transform: uppercase;
   .post-date {
     display: block;
-    font-family: $serif;
-    font-size: $base_font_size;
+    font-family: $font-serif;
+    font-size: $base-font-size;
     margin-bottom: 10px;
     text-transform: none;
   }
