@@ -1,16 +1,35 @@
+$nav-padding: calc((100% - 800px) / 2);
+
 .global-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: $pink;
-  padding: 0 20px;
+  padding: 0 $nav-padding;
+
+  @include breakpoint(tablet-sm) {
+    $nav-padding: calc((100% - 90%) / 2);
+    padding: 0 $nav-padding;
+  }
+}
+
+.global-nav__brand {
+  font-family: $sans;
+  font-weight: bold;
+  font-size: 18px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .global-nav__list {
   @extend %unstyled-list;
   display: flex;
   justify-content: flex-end;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-
   a {
     color: $white;
   }

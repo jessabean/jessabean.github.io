@@ -695,8 +695,35 @@ blockquote {
       width: auto; } }
 
 .global-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #db3b69;
-  padding: 0 20px; }
+  padding: 0 -webkit-calc((100% - 800px) / 2);
+  padding: 0 calc((100% - 800px) / 2); }
+  @media (max-width: 760px) {
+    .global-nav {
+      padding: 0 -webkit-calc((100% - 90%) / 2);
+      padding: 0 calc((100% - 90%) / 2); } }
+
+.global-nav__brand {
+  font-family: "open-sans-1", "open-sans-2", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .global-nav__brand:hover {
+    color: #fff; }
 
 .global-nav__list {
   display: -webkit-box;
@@ -706,10 +733,7 @@ blockquote {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto; }
+          justify-content: flex-end; }
   .global-nav__list a {
     color: #fff; }
 
