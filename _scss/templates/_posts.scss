@@ -1,5 +1,4 @@
 .posts-list {
-  @extend %unstyled-list;
   > li {
     margin-bottom: 40px;
   }
@@ -30,7 +29,6 @@
 }
 
 .tags-list {
-  @extend %unstyled-list;
   display: inline-block;
   margin-left: 10px;
   li {

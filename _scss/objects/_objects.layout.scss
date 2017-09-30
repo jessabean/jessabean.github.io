@@ -1,0 +1,12 @@
+.o-layout {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.o-layout--container {
+  max-width: 90%;
+
+  @media screen and (min-width: 42em) {
+    max-width: $content-width;
+  }
+}

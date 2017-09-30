@@ -2,12 +2,13 @@
 
 @import "settings/settings";
 
-@import "dependencies/helpers";
 @import "dependencies/responsive";
 
 @import "base/layout";
 @import "base/typography";
 @import "base/base";
+
+@import "objects/objects";
 
 @import "components/nav";
 @import "components/icon";

@@ -27,7 +27,6 @@ $nav-padding: calc((100% - #{$content-width}) / 2);
 }
 
 .global-nav__list {
-  @extend %unstyled-list;
   display: flex;
   justify-content: flex-end;
   a {

@@ -369,18 +369,13 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-.global-nav__list, .social-links, .posts-list, .tags-list {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
 html,
 body {
   margin: 0; }
 
 .page-width {
-  padding: 40px -webkit-calc((100% - 48em) / 2);
-  padding: 40px calc((100% - 48em) / 2); }
+  padding: 40px -webkit-calc((100% - 42em) / 2);
+  padding: 40px calc((100% - 42em) / 2); }
   @media (max-width: 760px) {
     .page-width {
       padding: 40px -webkit-calc((100% - 90%) / 2);
@@ -697,6 +692,24 @@ blockquote {
       margin: 0;
       width: auto; } }
 
+.o-list-bare {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.o-list-bare__item {
+  margin-left: 0; }
+
+.o-layout {
+  margin-left: auto;
+  margin-right: auto; }
+
+.o-layout--container {
+  max-width: 90%; }
+  @media screen and (min-width: 42em) {
+    .o-layout--container {
+      max-width: 42em; } }
+
 .global-nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -711,8 +724,8 @@ blockquote {
       -ms-flex-align: center;
           align-items: center;
   background: #db3b69;
-  padding: 0 -webkit-calc((100% - 48em) / 2);
-  padding: 0 calc((100% - 48em) / 2); }
+  padding: 0 -webkit-calc((100% - 42em) / 2);
+  padding: 0 calc((100% - 42em) / 2); }
   @media (max-width: 760px) {
     .global-nav {
       padding: 0 -webkit-calc((100% - 90%) / 2);
@@ -781,7 +794,7 @@ pre[class*="language-"] code {
   padding: 0; }
 
 .masthead {
-  max-width: 48em;
+  max-width: 42em;
   margin: 0 auto;
   padding: 40px 0; }
   .masthead h1 {
@@ -887,10 +900,10 @@ pre[class*="language-"] code {
   overflow: auto;
   width: 100%;
   height: 100%;
-  padding-left: -webkit-calc((100% - 48em) / 2);
-  padding-left: calc((100% - 48em) / 2);
-  padding-right: -webkit-calc((100% - 48em) / 2);
-  padding-right: calc((100% - 48em) / 2);
+  padding-left: -webkit-calc((100% - 42em) / 2);
+  padding-left: calc((100% - 42em) / 2);
+  padding-right: -webkit-calc((100% - 42em) / 2);
+  padding-right: calc((100% - 42em) / 2);
   background: #333;
   color: #fff;
   -webkit-transition: -webkit-transform 0.5s;
