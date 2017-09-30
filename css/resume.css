@@ -369,6 +369,11 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+.global-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 html,
 body {
   margin: 0; }
@@ -689,18 +694,51 @@ blockquote {
       margin: 0;
       width: auto; } }
 
-@media screen {
-  .resume .global-nav {
-    position: static;
-    margin-bottom: 2.5rem; }
-  .resume .global-nav ul {
-    font-size: 16px;
-    text-transform: none; }
-  .resume .global-nav a:visited {
+.global-nav {
+  background: #db3b69;
+  padding: 0 20px; }
+
+.global-nav__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+  .global-nav__list a {
     color: #fff; }
+
+.global-nav__item {
+  margin: 0 10px; }
+  .global-nav__item a {
+    display: block;
+    padding: 10px 0; }
+    .global-nav__item a:hover {
+      border-bottom: none; }
+
+.icon {
+  width: 48px;
+  height: 48px; }
+  @media (max-width: 480px) {
+    .icon {
+      width: 32px;
+      height: 32px; } }
+
+.icon-social {
+  fill: #db3b69;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .icon-social:hover {
+    fill: #30808e; }
+
+@media screen {
   .resume__header {
-    background: #38ad93;
-    color: #fff;
     padding-top: 40px;
     padding-right: -webkit-calc((100% - 600px) / 2);
     padding-right: calc((100% - 600px) / 2);
@@ -762,10 +800,12 @@ blockquote {
       border: none; }
     .resume__header .resume-print {
       display: inline-block;
-      padding: 0.2rem 1rem;
+      padding: 0.5rem 1rem;
       font-size: 14px;
+      line-height: 1;
       text-transform: uppercase;
-      background: #88c3cd;
+      text-decoration: none;
+      background: #38ad93;
       color: #fff;
       -webkit-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;

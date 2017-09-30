@@ -3,30 +3,16 @@
 @import "dependencies/variables";
 @import "dependencies/helpers";
 @import "dependencies/responsive";
+
 @import "base/layout";
 @import "base/typography";
 @import "base/base";
 
+@import "components/nav";
+@import "components/icon";
+
 @media screen {
-  .resume {
-    .global-nav {
-      position: static;
-      margin-bottom: 2.5rem;
-    }
-
-    .global-nav ul {
-      font-size: 16px;
-      text-transform: none;
-    }
-
-    .global-nav a:visited {
-      color: #fff;
-    }
-  }
-
   .resume__header {
-    background: $aqua;
-    color: #fff;
     padding-top: 40px;
     padding-right: calc((100% - #{$content-width}) / 2);
     padding-bottom: 40px;
@@ -84,10 +70,12 @@
 
     .resume-print {
       display: inline-block;
-      padding: 0.2rem 1rem;
+      padding: 0.5rem 1rem;
       font-size: 14px;
+      line-height: 1;
       text-transform: uppercase;
-      background: $teal-light;
+      text-decoration: none;
+      background: $aqua;
       color: #fff;
       transition: all 0.2s ease;
 
@@ -242,7 +230,7 @@
     .resume-print {
       display: none;
     }
-    
+
     .resume__subtitle {
       margin-bottom: 1.5rem;
       border-bottom: 1px solid $gray-lightest;
@@ -290,7 +278,7 @@
         border-top: 1px solid $gray-lightest;
       }
     }
-    
+
     .resume__section-header {
       font-size: 24px;
       width: 20%;
@@ -362,9 +350,9 @@
       break-before: always;
     }
 
-    @page { 
+    @page {
       size: auto;
-      margin: 0.5cm; 
-    } 
+      margin: 0.5cm;
+    }
   }
 }
