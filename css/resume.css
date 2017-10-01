@@ -684,10 +684,6 @@ blockquote {
     font-size: 26px;
     font-style: italic;
     text-align: center; }
-  @media screen and (min-width: 42em) {
-    blockquote {
-      margin-left: -75px;
-      width: 750px; } }
 
 .o-list-bare {
   list-style: none;

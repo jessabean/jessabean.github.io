@@ -109,9 +109,4 @@ blockquote {
     font-style: italic;
     text-align: center;
   }
-
-  @include min-width($breakpoint-md) {
-    margin-left: -75px;
-    width: 750px;
-  }
 }
