@@ -707,6 +707,9 @@ blockquote {
     .o-layout--container {
       max-width: 42em; } }
 
+.o-grid {
+  display: grid; }
+
 .global-nav {
   display: -webkit-box;
   display: -webkit-flex;

@@ -24,16 +24,13 @@
       {% include nav.html %}
 
     <header class="resume__header" role="banner">
-
-      <div class="resume__title flex">
-        <div class="flex-cell"><h1>Jessica Eldredge</h1></div>
-        <div class="flex-cell flex-cell--right"><a href="jeldredge_resume.pdf" class="resume-print">Print</a></div>
+      <div class="resume__header-inner o-layout o-layout--container">
+        <h1>Jessica Eldredge</h1>
+        <h2>Front-End Developer</h2>
+        <span class="email">jess@eldredge.io</span>
+        <div class="print"><a href="jeldredge_resume.pdf" class="btn-print">Print</a></div>
+        <div class="resume__summary">I'm an empathetic developer who enjoys building user experiences with HTML, CSS, and JavaScript. I care deeply about people, and collaborating with my teammates to build products that will make users&mdash;and developers!&mdash;happy. As a lifelong learner, I believe in mentorship and fostering respectful environments for sharing knowledge.</div>
       </div>
-      <div class="resume__subtitle flex">
-        <div class="flex-cell"><h2>Front-End Developer</h2></div>
-        <div class="flex-cell flex-cell--right">jess@eldredge.io</div>
-      </div>
-      <div class="resume__summary">I'm an empathetic developer who enjoys building user experiences with HTML, CSS, and JavaScript. I care deeply about people, and collaborating with my teammates to build products that will make users&mdash;and developers!&mdash;happy. As a lifelong learner, I believe in mentorship and fostering respectful environments for sharing knowledge.</div>
     </header>
     <main class="resume__body" role="main">
       {{ content }}
