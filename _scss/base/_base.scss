@@ -52,12 +52,8 @@ h3 {
 
 p {
   line-height: $base-line-height;
-  margin-bottom: 32px;
   margin-top: 0;
-
-  @include breakpoint(tablet-sm) {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 }
 
 a {
@@ -104,16 +100,18 @@ figcaption {
 }
 
 blockquote {
-  margin-left: -75px;
-  width: 750px;
+  font-size: 22px;
+  margin: 0;
+  width: auto;
+
   p {
     font-size: 26px;
     font-style: italic;
     text-align: center;
   }
-  @include breakpoint(tablet-sm) {
-    font-size: 22px;
-    margin: 0;
-    width: auto;
+
+  @include min-width($breakpoint-md) {
+    margin-left: -75px;
+    width: 750px;
   }
 }

@@ -374,12 +374,12 @@ body {
   margin: 0; }
 
 .page-width {
-  padding: 40px -webkit-calc((100% - 42em) / 2);
-  padding: 40px calc((100% - 42em) / 2); }
-  @media (max-width: 760px) {
+  padding: 40px -webkit-calc((100% - 90%) / 2);
+  padding: 40px calc((100% - 90%) / 2); }
+  @media screen and (min-width: 42em) {
     .page-width {
-      padding: 40px -webkit-calc((100% - 90%) / 2);
-      padding: 40px calc((100% - 90%) / 2); } }
+      padding: 40px -webkit-calc((100% - 42em) / 2);
+      padding: 40px calc((100% - 42em) / 2); } }
 
 .visually-hidden {
   position: absolute;
@@ -640,11 +640,8 @@ h3 {
 
 p {
   line-height: 1.5;
-  margin-bottom: 32px;
-  margin-top: 0; }
-  @media (max-width: 760px) {
-    p {
-      margin-bottom: 20px; } }
+  margin-top: 0;
+  margin-bottom: 20px; }
 
 a {
   color: #38ad93;
@@ -680,17 +677,17 @@ figcaption {
   text-align: center; }
 
 blockquote {
-  margin-left: -75px;
-  width: 750px; }
+  font-size: 22px;
+  margin: 0;
+  width: auto; }
   blockquote p {
     font-size: 26px;
     font-style: italic;
     text-align: center; }
-  @media (max-width: 760px) {
+  @media screen and (min-width: 42em) {
     blockquote {
-      font-size: 22px;
-      margin: 0;
-      width: auto; } }
+      margin-left: -75px;
+      width: 750px; } }
 
 .o-list-bare {
   list-style: none;
@@ -724,12 +721,12 @@ blockquote {
       -ms-flex-align: center;
           align-items: center;
   background: #db3b69;
-  padding: 0 -webkit-calc((100% - 42em) / 2);
-  padding: 0 calc((100% - 42em) / 2); }
-  @media (max-width: 760px) {
+  padding: 0 -webkit-calc((100% - 90%) / 2);
+  padding: 0 calc((100% - 90%) / 2); }
+  @media screen and (min-width: 42em) {
     .global-nav {
-      padding: 0 -webkit-calc((100% - 90%) / 2);
-      padding: 0 calc((100% - 90%) / 2); } }
+      padding: 0 -webkit-calc((100% - 42em) / 2);
+      padding: 0 calc((100% - 42em) / 2); } }
 
 .global-nav__brand {
   font-family: "open-sans-1", "open-sans-2", Helvetica, Arial, sans-serif;
@@ -762,12 +759,12 @@ blockquote {
       border-bottom: none; }
 
 .icon {
-  width: 48px;
-  height: 48px; }
-  @media (max-width: 480px) {
+  width: 32px;
+  height: 32px; }
+  @media screen and (min-width: 42em) {
     .icon {
-      width: 32px;
-      height: 32px; } }
+      width: 48px;
+      height: 48px; } }
 
 .icon-social {
   fill: #db3b69;
@@ -776,323 +773,3 @@ blockquote {
   transition: all 0.3s ease-in-out; }
   .icon-social:hover {
     fill: #30808e; }
-
-@media screen {
-  .resume__header {
-    padding-top: 40px;
-    padding-right: -webkit-calc((100% - 42em) / 2);
-    padding-right: calc((100% - 42em) / 2);
-    padding-bottom: 40px;
-    padding-left: -webkit-calc((100% - 42em) / 2);
-    padding-left: calc((100% - 42em) / 2);
-    position: relative; } }
-  @media screen and (max-width: 600px) {
-    .resume__header {
-      padding-bottom: 40px; } }
-  @media screen and (max-width: 760px) {
-    .resume__header {
-      padding: 40px -webkit-calc((100% - 90%) / 2);
-      padding: 40px calc((100% - 90%) / 2);
-      text-align: center; } }
-
-@media screen {
-    .resume__header .flex {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; } }
-    @media screen and (max-width: 760px) {
-      .resume__header .flex {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column; } }
-
-@media screen {
-    .resume__header .flex-cell {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-              flex: 0 1 auto; }
-      .resume__header .flex-cell:first-child {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-            -ms-flex: 1;
-                flex: 1; }
-    .resume__header .flex-cell--right {
-      text-align: right; } }
-    @media screen and (max-width: 760px) {
-      .resume__header .flex-cell--right {
-        text-align: center; } }
-
-@media screen {
-    .resume__header h1 {
-      font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, serif;
-      font-weight: normal;
-      line-height: 1;
-      margin-top: 0;
-      margin-bottom: 0.5rem; }
-    .resume__header h2 {
-      font-size: 24px;
-      font-weight: normal;
-      margin-top: 0;
-      border: none; }
-    .resume__header .resume-print {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      font-size: 14px;
-      line-height: 1;
-      text-transform: uppercase;
-      text-decoration: none;
-      background: #38ad93;
-      color: #fff;
-      -webkit-transition: all 0.2s ease;
-      -o-transition: all 0.2s ease;
-      transition: all 0.2s ease; }
-      .resume__header .resume-print:after {
-        display: none; }
-      .resume__header .resume-print:hover {
-        background: #db3b69; } }
-    @media screen and (max-width: 760px) {
-      .resume__header .resume-print {
-        display: none; } }
-
-@media screen {
-    .resume__header .resume__subtitle {
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid #f2f2f2; }
-      .resume__header .resume__subtitle h2 {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        margin-bottom: 0; } }
-    @media screen and (max-width: 760px) {
-      .resume__header .resume__subtitle {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column; } }
-
-@media screen and (max-width: 760px) {
-  .resume__summary {
-    font-size: 18px;
-    text-align: left; } }
-
-@media screen {
-  .resume__section-header {
-    border-bottom: 1px solid #f2f2f2; }
-  .resume__body {
-    padding: 40px -webkit-calc((100% - 42em) / 2);
-    padding: 40px calc((100% - 42em) / 2);
-    font-size: 16px; } }
-  @media screen and (max-width: 760px) {
-    .resume__body {
-      padding: 40px -webkit-calc((100% - 90%) / 2);
-      padding: 40px calc((100% - 90%) / 2); } }
-
-@media screen {
-  .entry + .entry {
-    margin-top: 2rem; }
-  .entry__header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    font-family: "open-sans-1", "open-sans-2", Helvetica, Arial, sans-serif; } }
-  @media screen and (max-width: 760px) {
-    .entry__header {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
-
-@media screen {
-  .entry__description {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
-  .entry__title {
-    border: none;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    line-height: 1; }
-  .entry__subtitle {
-    font-size: 18px;
-    line-height: 1;
-    margin: 0; }
-  .entry__date {
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase; } }
-  @media screen and (max-width: 760px) {
-    .entry__date {
-      margin-top: 0.5rem; } }
-
-@media screen {
-  .skillset {
-    list-style: none;
-    margin-left: 0;
-    margin-top: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-    .skillset li {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-              flex: 0 1 auto;
-      width: 25%; } }
-    @media screen and (max-width: 760px) {
-      .skillset li {
-        width: 50%; } }
-
-@media screen {
-  .resume__footer {
-    border-top: 1px solid #f2f2f2;
-    padding: 40px 0;
-    font-size: 18px;
-    text-align: center; }
-    .resume__footer .social-links {
-      margin-bottom: 1.5rem; }
-  .resume__footer-header {
-    font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, serif;
-    font-size: 36px;
-    margin-bottom: 0.5rem;
-    margin-top: 0; } }
-
-@media print {
-  .resume {
-    font-size: 16px;
-    overflow: visible; }
-    .resume p {
-      font-size: 16px; }
-    .resume .global-nav {
-      display: none; }
-    .resume .resume__header h1 {
-      font-size: 32px;
-      margin-bottom: 0;
-      margin-top: 0; }
-    .resume .resume-print {
-      display: none; }
-    .resume .resume__subtitle {
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid #f2f2f2; }
-    .resume .resume__subtitle h2 {
-      border: none;
-      margin: 0; }
-    .resume .flex {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: baseline;
-      -webkit-align-items: baseline;
-          -ms-flex-align: baseline;
-              align-items: baseline; }
-    .resume .flex-cell {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
-    .resume .flex-cell--right {
-      -webkit-box-flex: 0;
-      -webkit-flex: none;
-          -ms-flex: none;
-              flex: none; }
-    .resume .resume__subtitle span {
-      position: relative; }
-    .resume .resume__subtitle span:before {
-      content: "jessica-eldredge.com";
-      position: absolute;
-      top: -26px; }
-    .resume .resume__section:after {
-      content: " ";
-      display: block;
-      clear: both; }
-    .resume .resume__section {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      padding: 20px 0; }
-      .resume .resume__section + .resume__section {
-        border-top: 1px solid #f2f2f2; }
-    .resume .resume__section-header {
-      font-size: 24px;
-      width: 20%;
-      margin-right: 1.5rem;
-      margin-top: 0;
-      border: none; }
-    .resume .resume__section-header,
-    .resume .resume__section-body {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-              flex: 0 1 auto; }
-    .resume .resume__section-body {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
-    .resume .skillset {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap; }
-    .resume .skillset li {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-              flex: 0 1 auto;
-      width: 25%; }
-    .resume .entry__header {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      font-family: "open-sans-1", "open-sans-2", Helvetica, Arial, sans-serif; }
-    .resume .entry__description {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
-    .resume .entry__title {
-      margin: 0;
-      font-size: 18px;
-      border: none; }
-    .resume .entry__subtitle {
-      font-size: 16px;
-      margin: 0; }
-    .resume ul.entry__content,
-    .resume .resume__section--community ul {
-      padding-left: 0; }
-    .resume .resume__section--community ul {
-      margin-top: 0; }
-    .resume .resume__section--skills h3 {
-      margin-bottom: 0; }
-    .resume .resume__footer {
-      display: none; }
-    .resume .page-break {
-      -webkit-column-break-before: always;
-         page-break-before: always;
-              break-before: always; }
-  @page {
-    .resume {
-      size: auto;
-      margin: 0.5cm; } } }

@@ -39,9 +39,10 @@
 
 .post-img {
   display: block;
-  margin: 32px 0;
-  @include breakpoint(tablet-sm) {
-    max-width: 100%;
-    margin: 20px auto;
+  max-width: 100%;
+  margin: 20px auto;
+
+  @include min-width($breakpoint-md) {
+    margin: 32px 0;
   }
 }

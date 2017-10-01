@@ -1,4 +1,4 @@
-$nav-padding: calc((100% - #{$content-width}) / 2);
+$nav-padding: calc((100% - 90%) / 2);
 
 .global-nav {
   display: flex;
@@ -7,8 +7,8 @@ $nav-padding: calc((100% - #{$content-width}) / 2);
   background: $pink;
   padding: 0 $nav-padding;
 
-  @include breakpoint(tablet-sm) {
-    $nav-padding: calc((100% - 90%) / 2);
+  @include min-width($breakpoint-md) {
+    $nav-padding: calc((100% - #{$content-width}) / 2);
     padding: 0 $nav-padding;
   }
 }

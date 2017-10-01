@@ -1,4 +1,5 @@
-$content-padding: calc((100% - #{$content-width}) / 2);
+$content-padding: calc((100% - 90%) / 2);
+
 
 html,
 body {
@@ -8,16 +9,16 @@ body {
 .page-width {
   padding: 40px $content-padding;
 
-  @include breakpoint(tablet-sm) {
-    $content-padding: calc((100% - 90%) / 2);
+  @include min-width($breakpoint-md) {
+    $content-padding: calc((100% - #{$content-width}) / 2);
     padding: 40px $content-padding;
   }
 }
 
 .visually-hidden {
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; 
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
 }
