@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Developing with Yeoman</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script type="text/javascript" src="//use.typekit.net/nvf6gkk.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+    <nav class="global-nav">
+  <a class="global-nav__brand" href="/">Jess Eldredge</a>
+  <ul role="navigation" class="global-nav__list o-list-bare">
+    <li class="global-nav__item"><a href="/">Home</a></li>
+    <li class="global-nav__item"><a href="/blog">Writing</a></li>
+    <li class="global-nav__item"><a href="/now">Now</a></li>
+  </ul>
+</nav>
+
+    <main id="main" role="main">
+      <article class="post o-layout o-layout--container">
+  <header class="post-header">
+    <h1>Developing with Yeoman</h1>
+  </header>
+
+  <p>I wanted to build a personal site and blog with <a href="http://jekyllrb.com/">Jekyll</a>, and decided to develop with <a href="http://yeoman.io/">Yeoman</a>, a workflow that so many people seem to be saying good things about. I had a couple of requirements when I began:</p>
+
+<ul>
+  <li>Use Yeoman, Grunt, and Bower to generate my assets and manage my development tasks</li>
+  <li>Create separate git repositories for my source code and the generated public site</li>
+  <li>Manage my repositories with Github</li>
+</ul>
+
+<h2 id="setup">Setup</h2>
+
+<p>To create the skeleton for my site, I decided to use Rob Wierzbowski’s <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> so I could quickly scaffold a Jekyll site and the appropriate directories.</p>
+
+<p>The first thing I did was to create a new repository on Github, which I named <code class="highlighter-rouge">jessabean_source</code>. Then I cloned the repository to my computer and navigated into my local copy of <code class="highlighter-rouge">jessabean_source</code>:</p>
+
+<pre><code class="language-bash">git clone git@github.com:jessabean/jessabean_source.git
+cd jessabean_source</code></pre>
+
+<p>Once inside the directory, I ran the generator-jekyllrb setup command:</p>
+
+<pre><code class="language-bash">yo jekyllrb</code></pre>
+
+<p>I chose the following config options in response to the generator’s prompts:</p>
+
+<ul>
+  <li>Compass for Sass compilation</li>
+  <li>Redcarpet for Markdown</li>
+  <li>No Pygments (I chose to use Lea Verou’s <a href="http://prismjs.com/">prism.js</a> instead)</li>
+  <li>HTML5 Boilerplate</li>
+  <li>Autoprefixer: HELL TO THE YES</li>
+  <li>Number of blog posts on homepage: 0</li>
+</ul>
+
+<p>I didn’t include any posts on my homepage, because I wanted to set my blog up in a subdirectory of my site, and use my index page to feature recent projects instead. More on that in a later post! Generator-jekyllrb created the following structure for my site:</p>
+
+<ul>
+  <li>.jekyll</li>
+  <li>.tmp</li>
+  <li><strong>app/</strong></li>
+  <li><strong>dist/</strong></li>
+  <li><strong>node_modules/</strong></li>
+  <li>.bowerrc</li>
+  <li>.csslintrc</li>
+  <li>.editorconfig</li>
+  <li>.gitattributes</li>
+  <li>.gitignore</li>
+  <li>.jshintrc</li>
+  <li>_config.build.yml</li>
+  <li>_config.yml</li>
+  <li>bower.json</li>
+  <li>Gemfile</li>
+  <li>Gruntfile.js</li>
+  <li>package.json</li>
+</ul>
+
+<p>I can also preview my site for local development by running <code class="highlighter-rouge">grunt server</code> and viewing my site in the browser at http://localhost:9000/</p>
+
+<h2 id="using-bower">Using Bower</h2>
+
+<p>Bower is an awesome package manager that allows you to manage CSS and Javascript vendor frameworks on your site, as well as choose the version for those frameworks. It’s very similar to RubyGems, but without the back end dependency. Extra sugar: if you don’t care about a particular version of a library, you can specify that you want whatever the latest version is, and Bower will fetch it for you.</p>
+
+<p>There were a few libraries I knew I’d want for my site. First I needed to include those libraries I wanted for my site in the <code class="highlighter-rouge">bower.json</code> file.</p>
+
+<pre><code class="language-javascript">{
+  "name": "jessabean-source",
+  "version": "2.0.0",
+  "dependencies": {
+    "jquery": "2.0.3",
+    "normalize-css": "latest",
+    "modernizr": "latest",
+    "prismjs": "latest"
+  }
+}
+</code></pre>
+
+<p>Then I installed the dependencies with <code class="highlighter-rouge">bower install</code>. Bower installed the specified JS and CSS files into individual directories inside <code class="highlighter-rouge">app/_bower_components</code>.</p>
+
+<p>In order to compile the assets, Grunt requires you to declare those assets inside special comments in your HTML. For example, to include Modernizr, I put this inside the <code class="highlighter-rouge">head</code> tag of my layout file located at <code class="highlighter-rouge">app/_layouts/default.html</code>:</p>
+
+<pre><code class="language-markup">&lt;!-- build:js(app) /js/script.js --&gt;
+&lt;script src="/_bower_components/modernizr/modernizr.js"&gt;&lt;/script&gt;
+&lt;!-- endbuild --&gt;
+</code></pre>
+
+<h2 id="git-repository-for-source-code">Git Repository for Source Code</h2>
+
+<p>Another requirement I had for my site was to create separate repositories for my source code and the generated code. Because reasons.</p>
+
+<p>All of the source code for my site was already set up in the repository for <code class="highlighter-rouge">jessabean_source</code>. There were just a few more things I wanted to configure. Because the tmp directory, node modules, and bower components are used solely for local development and not needed in production, I add them to my <code class="highlighter-rouge">.gitignore</code> file.</p>
+
+<pre><code class="language-javascript">app/_bower_components
+dist
+node_modules
+.tmp
+</code></pre>
+
+<p>All that shows up in my source code repository is the app itself and its accompanying config files. Nice and clean. You can see my source code repository at <a href="https://github.com/jessabean/jessabean_source">jessabean_source</a>.</p>
+
+<h2 id="git-repository-for-public-code">Git Repository for Public Code</h2>
+
+<p>To create a separate repository for my public site at <a href="https://github.com/jessabean/jessabean.github.io">jessabean.github.io</a>, I first added the <code class="highlighter-rouge">dist/</code> directory to the list of things in my <code class="highlighter-rouge">.gitignore</code>. This directory is where Grunt places the compiled version of my app code, and I didn’t want to include this in my source repository.</p>
+
+<p>Then, I navigated into the <code class="highlighter-rouge">/dist</code> directory and deleted all of its contents, giving me a clean slate to build the new repository. I then created a repository called <code class="highlighter-rouge">jessabean.github.io</code> at Github, and cloned its contents into my current directory (<code class="highlighter-rouge">dist/</code>).</p>
+
+<pre><code class="language-bash">git clone git@github.com:jessabean/jessabean.github.io.git .
+</code></pre>
+
+<p>Once the repository was set up, I needed to add content. To do this, I navigated up one level, back to my source code. I then compiled my app by running <code class="highlighter-rouge">grunt build</code>.</p>
+
+<p>I could verify that changes had been made to my <code class="highlighter-rouge">jessabean.github.io</code> repository by changing into the <code class="highlighter-rouge">dist/</code> directory and seeing a ton of new files had been generated as unstaged commits.</p>
+
+<p>All that was left was to wrap everything up into commits, push them up to my repositories, and boom. Website.</p>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<p>Setup was fairly painless with Yeoman. LiveReload and Autoprefixer are some of my favorite aspects of the generator package–they are really, really handy tools! One thing I would like to investigate further is whether all the grunt tasks included by default under <code class="highlighter-rouge">node_modules</code> are  necessary. I suspect that they’re not, but many of them are interdependent, so trying to delete one led me into a rabbit hole of despair that I quickly decided wasn’t worth it.</p>
+
+<p>There are other build components I want to explore. For instance, <a href="http://prismjs.com/">prism.js</a> has a Bower component, but I couldn’t figure out how to include the language support at first. I ended up including each of the language files I wanted (located in <code class="highlighter-rouge">_bower_components/prismjs/components/</code>) inside Grunt build comments in my scripts file. But it would be nicer if I could package them up inside of the bower.json file, or maybe build a Grunt task that will combine them all into a minified JS file, like the <a href="http://prismjs.com/">prism.js</a> site’s download page allows me to do.</p>
+
+
+
+  <footer class="post-footer">
+    <time datetime="2014-01-11 00:00:00 -0500" class="post-date">11 January 2014</time>
+    
+      Tagged:
+      <ul class="tags-list o-list-bare">
+        
+        
+          <li><a href="/tag/development">development</a></li>
+        
+      </ul>
+    
+  </footer>
+</article>
+
+    </main>
+  </body>
+</html>

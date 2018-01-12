@@ -1,19 +1,78 @@
----
-layout: blog
-title: Blog - Jessica Eldredge
----
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog - Jessica Eldredge</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/main.css">
 
-<section class="posts o-layout o-layout--container">
+    <script type="text/javascript" src="//use.typekit.net/nvf6gkk.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+    <nav class="global-nav">
+  <a class="global-nav__brand" href="/">Jess Eldredge</a>
+  <ul role="navigation" class="global-nav__list o-list-bare">
+    <li class="global-nav__item"><a href="/">Home</a></li>
+    <li class="global-nav__item"><a href="/blog">Writing</a></li>
+    <li class="global-nav__item"><a href="/now">Now</a></li>
+  </ul>
+</nav>
+
+    <main id="main" role="main">
+      <section class="posts o-layout o-layout--container">
   <ul class="posts-list o-list-bare">
-  {% for post in site.posts limit:5 %}
+  
     <li>
       <article>
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <div class="post-meta"><time>{{ post.date | date: "%-d %B %Y" }}</time></div>
-        <p>{{ post.blurb }}</p>
-        <a href="{{ post.url }}" class="read-more">read more</a>
+        <h1><a href="/2014/09/07/border-radius-50-or-100-percent/">Border-radius: 50% vs 100%</a></h1>
+        <div class="post-meta"><time>7 September 2014</time></div>
+        <p>Lately, I’ve been trying to reexamine some of the CSS rules I’ve taken for granted in my career. I’ve written a lot of code without really understanding the reason why; I’ve simply accepted certain ways of doing things as common practice.</p>
+        <a href="/2014/09/07/border-radius-50-or-100-percent/" class="read-more">read more</a>
       </article>
     </li>
-  {% endfor %}
+  
+    <li>
+      <article>
+        <h1><a href="/2014/04/17/submitting-my-first-talk-proposal/">Submitting My First Talk Proposal</a></h1>
+        <div class="post-meta"><time>17 April 2014</time></div>
+        <p>I decided that in 2014, I’d push all excuses aside and give public speaking a shot. To my excitement (and if I’m being perfectly honest, a bit of apprehension too), my first talk proposal has been accepted to two conferences year! I wanted to share my experience crafting and submitting a proposal.</p>
+        <a href="/2014/04/17/submitting-my-first-talk-proposal/" class="read-more">read more</a>
+      </article>
+    </li>
+  
+    <li>
+      <article>
+        <h1><a href="/2014/02/17/rdio-playlist-art/">Custom Playlist Art on Rdio</a></h1>
+        <div class="post-meta"><time>17 February 2014</time></div>
+        <p>A really nice feature of the music subscription service Rdio is the ability to create custom artwork for playlists. It's a fun opportunity for people to personalize their music sharing experience.</p>
+        <a href="/2014/02/17/rdio-playlist-art/" class="read-more">read more</a>
+      </article>
+    </li>
+  
+    <li>
+      <article>
+        <h1><a href="/2014/01/26/headings-with-lines/">Create Headings with Lines in CSS</a></h1>
+        <div class="post-meta"><time>26 January 2014</time></div>
+        <p>A popular web design pattern is to include horizontal lines on either side of a line of text, often in a heading. There are many different ways to accomplish this via CSS.</p>
+        <a href="/2014/01/26/headings-with-lines/" class="read-more">read more</a>
+      </article>
+    </li>
+  
+    <li>
+      <article>
+        <h1><a href="/2014/01/22/animated-gifs-with-alfred/">Animated Gif Retrieval with Alfred</a></h1>
+        <div class="post-meta"><time>22 January 2014</time></div>
+        <p>An essential part of my daily workflow is quick and easy access to animated GIFs, so I can be ready with a timely and hilarious reaction to any communication with my colleagues. Alfred and Dropbox make this a breeze.</p>
+        <a href="/2014/01/22/animated-gifs-with-alfred/" class="read-more">read more</a>
+      </article>
+    </li>
+  
   </ul>
 </section>
+
+    </main>
+  </body>
+</html>
